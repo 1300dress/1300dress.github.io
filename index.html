@@ -4,45 +4,38 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>조수빈</title>
-  <meta name="description" content="에디터 · 카피라이터 조수빈의 작업">
+  <meta name="description" content="에디터 · 카피라이터 조수빈">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="landing">
   <header class="site-header">
-    <a class="name" href="index.html">조수빈</a>
-    <a href="#about">About</a>
-    <a href="cv.html">C/V</a>
-    <a href="mailto:EMAIL@example.com">Email</a>
-    <a href="https://www.instagram.com/saengmag/">@saengmag</a>
+    <a class="name title" href="index.html" aria-current="page">조수빈</a>
+    <nav class="site-nav">
+      <a href="about.html">About</a>
+      <a href="cv.html">C/V</a>
+      <a href="portfolio.html">Portfolio</a>
+    </nav>
   </header>
 
-  <main>
-    <h1 id="about">일상 속 다정함을,<br>손이 멈추는 짧은 언어로 만듭니다.</h1>
-
-    <ol class="index">
-      <li><a href="projects/01.html"><span class="num">(1)</span><span>별스러운 이유들로 열두 달을 사랑할래</span><span class="meta">생맥 · 2026</span></a></li>
-      <li><a href="#"><span class="num">(2)</span><span>취중잡담 → 9문9답</span><span class="meta">생맥 · Interview</span></a></li>
-      <li><a href="#"><span class="num">(3)</span><span>편지일기 × Fujifilm</span><span class="meta">Workshop · Exhibition</span></a></li>
-      <li><a href="#"><span class="num">(4)</span><span>신감각 신당동</span><span class="meta">Independent Magazine</span></a></li>
-      <li><a href="#"><span class="num">(5)</span><span>Artist Press Reels</span><span class="meta">Shooting · Editing</span></a></li>
-      <li><a href="#"><span class="num">(#)</span><span>Copywriting — Two Rabbits</span><span class="meta">Commercial</span></a></li>
-      <li><a href="#"><span class="num">(*)</span><span>그밖에</span><span class="meta">Archive</span></a></li>
-    </ol>
-
-    <section class="draw" aria-live="polite">
-      <button type="button" data-draw>*한 잔 우리기*</button>
-      <div class="cup">
-        <p class="line"></p>
-        <p class="source caption"></p>
-      </div>
-    </section>
+  <!-- 첫 화면: 스크롤 없는 한 장면. 왼쪽 문장, 가운데 찻잔, 오른쪽 한 잔 더 -->
+  <main class="hero draw" aria-live="polite">
+    <div class="vessel">
+      <div class="tea" aria-hidden="true"></div>
+      <h1 class="line">군더더기 없이<br>투명하게,<br>가장 좋은 상태로<br>우려냅니다.</h1>
+      <p class="source caption">에디터 · 카피라이터 조수빈</p>
+    </div>
+    <div class="cup-frame">
+      <img src="assets/img/hero-cup.webp" alt="위에서 내려다본 찻잔 속 연둣빛 차">
+      <div class="steam" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <button type="button" data-draw aria-label="다른 문장 우리기">Refill</button>
   </main>
 
-  <footer class="site-footer">© 조수빈</footer>
 
+  <script src="assets/ko-wrap.js"></script>
   <script src="assets/lines.js"></script>
   <script src="assets/draw.js"></script>
 </body>

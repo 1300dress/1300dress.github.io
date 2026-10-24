@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Type Tuner — 본명조를 Junicode에 맞추기</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600&display=block" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+@font-face {
+  font-family: "Junicode";
+  src: url(https://cdn.jsdelivr.net/gh/psb1558/Junicode-font@master/webfiles/JunicodeVF-Roman.woff2) format("woff2");
+  font-weight: 300 700;
+  font-stretch: 75% 125%;
+}
+:root { --ui: #8a8a8a; --line: #e4e4e4; }
+body { margin: 0; padding: 32px clamp(16px, 4vw, 48px) 80px; background: #fff; color: #111; font-family: Pretendard, sans-serif; font-size: 14px; word-break: keep-all; }
+h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; }
+.sub { color: var(--ui); margin: 0 0 24px; }
+h2 { font-size: 12px; font-weight: 600; letter-spacing: .08em; color: var(--ui); margin: 32px 0 12px; }
+
+/* 영문은 고정: Victoria CV의 Junicode Regular Condensed */
+.mix {
+  font-family: "Junicode", serif;
+  font-stretch: 75%;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-synthesis: none;
+  position: relative;
+}
+/* 한글만 튜닝 */
+.mix .ko {
+  font-family: "Noto Serif KR", serif;
+  font-stretch: 100%;
+  font-size: var(--ko-scale);
+  font-weight: var(--ko-wght);
+  letter-spacing: var(--ko-ls);
+  position: relative;
+  top: var(--ko-shift);
+  /* 세로 비율: 한글을 위로 늘려 Junicode Condensed의 길쭉한 비례에 맞춤 */
+  display: inline-block;
+  transform: scaleY(var(--ko-sy));
+  transform-origin: center 80%;
+}
+.d { font-size: 46px; line-height: 1.35; }
+.t { font-size: 24px; line-height: 1.6; }
+
+.layout { display: grid; grid-template-columns: minmax(260px, 320px) 1fr; gap: 32px; align-items: start; }
+@media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }
+
+.fixed { border: 1px solid var(--line); padding: 12px 14px; font-size: 12.5px; line-height: 1.7; margin-bottom: 20px; }
+.fixed b { font-weight: 600; }
+.presets { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.presets button, .actions button { font: inherit; font-size: 12.5px; padding: 6px 10px; border: 1px solid #111; background: #fff; cursor: pointer; }
+.presets button.on { background: #111; color: #fff; }
+.preset-desc { font-size: 12px; color: var(--ui); margin: -12px 0 20px; min-height: 1.5em; }
+
+.ctl { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; margin-bottom: 14px; }
+.ctl label { font-size: 12.5px; }
+.ctl output { font-size: 12.5px; color: var(--ui); font-variant-numeric: tabular-nums; }
+.ctl input { grid-column: 1 / -1; width: 100%; }
+
+.stage { border: 1px solid var(--line); padding: 20px 24px; position: relative; }
+.stage .mix { padding: 6px 0; }
+.guide { position: absolute; left: 0; right: 0; height: 0; border-top: 1px solid; pointer-events: none; }
+.guide.base { border-color: rgba(230, 0, 0, .55); }
+.guide.x { border-color: rgba(0, 110, 255, .45); border-top-style: dashed; }
+.guide.cap { border-color: rgba(0, 160, 90, .5); border-top-style: dashed; }
+.legend { font-size: 12px; color: var(--ui); margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.legend span::before { content: ""; display: inline-block; width: 18px; border-top: 2px solid; vertical-align: middle; margin-right: 6px; }
+.legend .l-base::before { border-color: rgba(230, 0, 0, .55); }
+.legend .l-x::before { border-color: rgba(0, 110, 255, .45); border-top-style: dashed; }
+.legend .l-cap::before { border-color: rgba(0, 160, 90, .5); border-top-style: dashed; }
+.legend label { color: #111; }
+
+pre { background: #f6f6f6; padding: 16px; font-size: 12px; line-height: 1.6; overflow-x: auto; white-space: pre; margin: 0; }
+.actions { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<h1>본명조를 Junicode에 맞추기</h1>
+<p class="sub">영문·숫자(Junicode Condensed)는 고정이고, 한글(본명조)만 조절합니다. 가이드선에 한글 높이와 기준선을 맞춰 보세요.</p>
+
+<div class="layout">
+  <div>
+    <div class="fixed">
+      <b>고정 · 영문 기준</b><br>
+      Junicode Regular Condensed<br>
+      굵기 400 · 폭 75% · 자간 0
+    </div>
+
+    <div class="presets" id="presets"></div>
+    <p class="preset-desc" id="preset-desc"></p>
+
+    <div id="controls"></div>
+  </div>
+
+  <div>
+    <div class="stage" id="stage">
+      <div class="mix d">조수빈 Subin Jo</div>
+      <div class="mix t">(1) 별스러운 이유들로 열두 달을 사랑할래</div>
+      <div class="mix t">(3) 편지일기 × Fujifilm 2026</div>
+      <div class="mix t">건배 없이 마음을 나누는 법 · Letter Diary</div>
+    </div>
+    <div class="legend">
+      <span class="l-base">영문 기준선</span>
+      <span class="l-x">영문 소문자 높이</span>
+      <span class="l-cap">영문 대문자 높이</span>
+      <label><input type="checkbox" id="guides" checked> 가이드 보기</label>
+    </div>
+
+    <h2>CSS</h2>
+    <pre id="css"></pre>
+    <h2>합성 글꼴 (InDesign · PDF용)</h2>
+    <pre id="composite"></pre>
+    <div class="actions">
+      <button type="button" id="copy">CSS 복사</button>
+      <button type="button" id="reset">처음 값으로</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// 한글 값만 담는 프리셋. 영문 값은 CSS에 고정되어 있습니다.
+const PRESETS = [
+  { id: "base",     name: "기본",         desc: "확정값: SemiBold · 자간 -12% · 세로 1.25배",
+    v: { koScale: 90, koSy: 125, koWght: 600, koLs: -0.12,  koShift: 0 } },
+  { id: "light",    name: "1 · 가볍게",   desc: "한글을 Junicode 굵기에 맞춰 가늘게. 가장 조용하고 고전적",
+    v: { koScale: 90, koWght: 300, koLs: -0.04,  koShift: 0,     koSy: 100 } },
+  { id: "height",   name: "2 · 높이 맞춤", desc: "한글 높이를 영문 대문자 높이에 맞춤. 줄이 가장 고르게 보임",
+    v: { koScale: 85, koWght: 300, koLs: -0.05,  koShift: -0.02, koSy: 100 } },
+  { id: "presence", name: "3 · 존재감",   desc: "한글 비중을 조금 크게. 한글 제목이 많은 자소서에 유리",
+    v: { koScale: 94, koWght: 300, koLs: -0.035, koShift: 0.01,  koSy: 100 } },
+];
+
+const CONTROLS = [
+  ["koScale", "크기 비율", 70, 110, 1, v => v + "%"],
+  ["koSy", "세로 비율 (글자 높이)", 100, 125, 1, v => (v / 100).toFixed(2) + "배"],
+  ["koWght", "굵기", 200, 600, 100, v => ({200:"200 ExtraLight",300:"300 Light",400:"400 Regular",500:"500 Medium",600:"600 SemiBold"})[v]],
+  ["koLs", "자간", -0.12, 0.05, 0.005, v => v + "em"],
+  ["koShift", "기준선 이동 (+ 아래로)", -0.1, 0.1, 0.005, v => v + "em"],
+];
+
+const state = { ...PRESETS[0].v };  // 기본값
+
+// 한글과 한글 쪽에서 받을 기호(×, 〈〉, ·)를 .ko 스팬으로 감싸기
+// 한글 덩어리는 한글로 시작하고 끝나게 해서, 앞뒤 띄어쓰기가 스팬 밖에 남도록 합니다
+const K = "ᄀ-ᇿ㄰-㆏가-힣〈-】×·";
+const KO = new RegExp(`([${K}](?:[${K} ]*[${K}])?)`);
+document.querySelectorAll(".mix").forEach(el => {
+  const parts = el.textContent.split(KO);
+  el.textContent = "";
+  parts.forEach(p => {
+    if (!p) return;
+    if (KO.test(p)) { const s = document.createElement("span"); s.className = "ko"; s.textContent = p; el.appendChild(s); }
+    else el.appendChild(document.createTextNode(p));
+  });
+});
+
+// 프리셋 버튼
+const presetBox = document.getElementById("presets");
+PRESETS.forEach(p => {
+  const b = document.createElement("button");
+  b.type = "button"; b.textContent = p.name; b.dataset.id = p.id;
+  b.addEventListener("click", () => { Object.assign(state, p.v); markPreset(p.id); sync(); });
+  presetBox.appendChild(b);
+});
+function markPreset(id) {
+  presetBox.querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.id === id));
+  const p = PRESETS.find(p => p.id === id);
+  document.getElementById("preset-desc").textContent = p ? p.desc : "직접 조정한 값";
+}
+
+// 슬라이더
+const ctlBox = document.getElementById("controls");
+CONTROLS.forEach(([key, label, min, max, step, fmt]) => {
+  const row = document.createElement("div");
+  row.className = "ctl";
+  row.innerHTML = `<label for="${key}">${label}</label><output id="${key}-out"></output>
+    <input type="range" id="${key}" min="${min}" max="${max}" step="${step}">`;
+  ctlBox.appendChild(row);
+  const input = row.querySelector("input");
+  input.addEventListener("input", () => { state[key] = parseFloat(input.value); markPreset(null); sync(); });
+  input._fmt = fmt;
+});
+
+// 영문 기준선·소문자·대문자 높이 가이드 (Junicode 실측)
+const canvas = document.createElement("canvas").getContext("2d");
+function junicodeMetrics(px) {
+  canvas.font = `400 ${px}px Junicode`;
+  canvas.fontStretch = "condensed";
+  return { cap: canvas.measureText("H").actualBoundingBoxAscent, x: canvas.measureText("x").actualBoundingBoxAscent };
+}
+function drawGuides() {
+  const stage = document.getElementById("stage");
+  stage.querySelectorAll(".guide").forEach(g => g.remove());
+  if (!document.getElementById("guides").checked) return;
+  const top0 = stage.getBoundingClientRect().top;
+  stage.querySelectorAll(".mix").forEach(line => {
+    // 줄 끝에 0크기 인라인 블록을 넣어 기준선 위치를 잽니다
+    const probe = document.createElement("span");
+    probe.style.cssText = "display:inline-block;width:0;height:0;vertical-align:baseline";
+    line.appendChild(probe);
+    const base = probe.getBoundingClientRect().top - top0;
+    probe.remove();
+    const m = junicodeMetrics(parseFloat(getComputedStyle(line).fontSize));
+    [["base", base], ["x", base - m.x], ["cap", base - m.cap]].forEach(([cls, y]) => {
+      const g = document.createElement("div");
+      g.className = "guide " + cls; g.style.top = y + "px";
+      stage.appendChild(g);
+    });
+  });
+}
+
+function sync() {
+  const stage = document.getElementById("stage");
+  stage.style.setProperty("--ko-scale", state.koScale + "%");
+  stage.style.setProperty("--ko-wght", state.koWght);
+  stage.style.setProperty("--ko-ls", state.koLs + "em");
+  stage.style.setProperty("--ko-shift", state.koShift + "em");
+  stage.style.setProperty("--ko-sy", state.koSy / 100);
+  CONTROLS.forEach(([key]) => {
+    const input = document.getElementById(key);
+    input.value = state[key];
+    document.getElementById(key + "-out").textContent = input._fmt(+state[key].toFixed(3));
+  });
+  const v = state;
+  document.getElementById("css").textContent =
+`/* 타이틀: 영문·숫자 Junicode Condensed(고정), 한글은 .ko 스팬으로 본명조 */
+.title {
+  font-family: "Junicode", serif;
+  font-stretch: 75%;
+  font-weight: 400;
+}
+.title .ko {
+  font-family: "Noto Serif KR", serif;
+  font-stretch: 100%;
+  font-size: ${v.koScale}%;
+  font-weight: ${v.koWght};
+  letter-spacing: ${v.koLs}em;
+  position: relative;
+  top: ${v.koShift}em;
+  display: inline-block;                 /* 세로 비율을 쓰려면 필요 */
+  transform: scaleY(${v.koSy / 100});
+  transform-origin: center 80%;
+}`;
+  const weightName = ({200:"ExtraLight",300:"Light",400:"Regular",500:"Medium",600:"SemiBold"})[v.koWght];
+  document.getElementById("composite").textContent =
+`합성 글꼴 이름: Subin Title
+  로마자 · 숫자          Junicode Condensed Regular   크기 100%   기준선 0
+  한글 · 기호(× 〈〉 ·)    본명조 ${weightName.padEnd(10)}         크기 ${v.koScale}%    기준선 ${(-v.koShift).toFixed(3)}em
+한글 세로 비율: ${v.koSy}%   (InDesign 문자 패널 '세로 비율')
+한글 자간(트래킹): ${Math.round(v.koLs * 1000)}  (InDesign 단위 1/1000em)
+※ 기준선은 em 값 × 글자 크기(pt). 예) 46pt × ${(-v.koShift).toFixed(3)} = ${(46 * -v.koShift).toFixed(2)}pt`;
+  location.replace("#" + new URLSearchParams(Object.entries(v)).toString());
+  requestAnimationFrame(drawGuides);
+}
+
+// 주소의 # 뒤 값으로 시작할 수 있게 (값 공유용)
+const fromHash = new URLSearchParams(location.hash.slice(1));
+CONTROLS.forEach(([key]) => { if (fromHash.has(key)) state[key] = parseFloat(fromHash.get(key)); });
+markPreset(fromHash.toString() ? null : "base");
+
+document.getElementById("guides").addEventListener("change", drawGuides);
+window.addEventListener("resize", drawGuides);
+document.getElementById("reset").addEventListener("click", () => { Object.assign(state, PRESETS[0].v); markPreset("base"); sync(); });
+document.getElementById("copy").addEventListener("click", async e => {
+  try { await navigator.clipboard.writeText(document.getElementById("css").textContent); e.target.textContent = "복사됨"; }
+  catch { e.target.textContent = "복사 실패 — 직접 선택해 주세요"; }
+});
+
+document.fonts.ready.then(sync);
+sync();
+</script>
+</body>
+</html>

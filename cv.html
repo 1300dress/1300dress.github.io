@@ -6,18 +6,22 @@
   <title>C/V — 조수빈</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="name" href="index.html">조수빈</a>
-    <a href="index.html">Index</a>
-    <a href="assets/조수빈_이력서.pdf">PDF</a>
+    <a class="name title" href="index.html">조수빈</a>
+    <nav class="site-nav">
+      <a href="about.html">About</a>
+      <a href="cv.html" aria-current="page">C/V</a>
+      <a href="portfolio.html">Portfolio</a>
+    </nav>
   </header>
 
   <main class="article">
-    <h1>C/V</h1>
+    <h1 class="page-title">C/V</h1>
+    <p class="caption"><a href="assets/조수빈_이력서.pdf">PDF로 받기</a></p>
     <p>브랜드의 말과 독자의 말 사이에서, 저장하고 싶은 한 장을 만듭니다.</p>
 
     <h2>경력</h2>
@@ -37,6 +41,7 @@
     <p>Premiere Pro · Figma · Notion · Slack · Claude · Gemini <span class="todo">실제 쓰는 것만</span></p>
   </main>
 
-  <footer class="site-footer"><a href="index.html">← Index</a></footer>
+  <footer class="site-footer"><a href="portfolio.html">← Portfolio</a></footer>
+  <script src="assets/ko-wrap.js"></script>
 </body>
 </html>
