@@ -75,7 +75,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ssuk); outline-
   display: flex;
   flex-wrap: wrap;
   gap: 8px 24px;
-  align-items: baseline;
+  align-items: center;
   margin-inline: calc(var(--gutter) * -1);
   padding: 18px var(--gutter) 14px;
   font-size: 15px;
@@ -86,6 +86,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ssuk); outline-
   box-shadow: inset 0 -1px 0 var(--glass-edge);
 }
 .site-header .name { margin-right: auto; font-size: 18px; }
+/* 손글씨 로고 'subin teahouse' (연필 질감 그대로). 올리면 김 서리듯 살짝 흐려짐 */
+.logo { display: block; align-self: center; }
+.logo-mark { display: block; height: 28px; width: auto; transition: filter .25s ease, opacity .25s ease; }
+@media (hover: hover) { .logo:hover .logo-mark { filter: blur(1.5px); opacity: .75; } }
+@media (max-width: 560px) { .logo-mark { height: 24px; } }
 .site-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .site-nav [aria-current="page"] { text-decoration: underline; text-decoration-color: var(--ssuk); text-underline-offset: 6px; text-decoration-thickness: 2px; }
 
