@@ -26,7 +26,15 @@
   }
 
   function show(pick) {
-    lineEl.textContent = pick.text;
+    // \n은 줄바꿈으로. 긴 문장은 글자를 한 단계 줄여 왼쪽 칸에 넉넉히 들어가게
+    lineEl.textContent = "";
+    pick.text.split("\n").forEach((part, i) => {
+      if (i) lineEl.appendChild(document.createElement("br"));
+      lineEl.appendChild(document.createTextNode(part));
+    });
+    const len = pick.text.replace(/\n/g, "").length;
+    lineEl.classList.toggle("is-mid", len > 20 && len <= 34);
+    lineEl.classList.toggle("is-long", len > 34);
     if (window.koWrap) window.koWrap(lineEl);
     sourceEl.innerHTML = "";
     const label = document.createTextNode("— " + pick.source);
