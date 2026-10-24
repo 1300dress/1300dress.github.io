@@ -1,0 +1,116 @@
+/* 서체는 하나만. 바꾸고 싶으면 --font 한 줄만 고치면 됩니다. */
+:root {
+  --font: "Noto Serif KR", "Nanum Myeongjo", serif;
+  --paper: #f6f2ea;      /* 아이보리 */
+  --ink: #1d1b18;        /* 먹색 */
+  --muted: #7a746a;      /* 캡션 */
+  --accent: #5d6b3c;     /* 포인트 1개: 쑥색 */
+  --line: #d9d2c4;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--paper); }
+
+body {
+  margin: 0;
+  padding: 0 var(--gutter) 80px;
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--ink);
+  background: var(--paper);
+  word-break: keep-all;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+
+/* 상단 메뉴: 이름 / About / C·V / Email / Instagram */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: baseline;
+  padding-block: 24px 0;
+  font-size: 15px;
+}
+.site-header .name { font-weight: 700; margin-right: auto; }
+
+/* 위계는 크기와 굵기로만: 제목 / 본문 / 캡션 */
+h1 {
+  font-size: clamp(30px, 6vw, 64px);
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 18vh 0 48px;
+  max-width: 16em;
+}
+h2 { font-size: 22px; margin: 64px 0 16px; }
+.caption { font-size: 13px; color: var(--muted); }
+
+/* Victoria식 번호 목록 */
+.index { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+.index li { border-bottom: 1px solid var(--line); }
+.index a {
+  display: grid;
+  grid-template-columns: 3.5em 1fr auto;
+  gap: 12px;
+  padding: 14px 0;
+  font-size: clamp(18px, 2.4vw, 26px);
+}
+.index .num { color: var(--muted); }
+.index .meta { font-size: 13px; color: var(--muted); align-self: center; }
+@media (max-width: 560px) {
+  .index a { grid-template-columns: 2.6em 1fr; }
+  .index .meta { grid-column: 2; }
+}
+
+/* 문장 뽑기 */
+.draw { margin: 96px 0; text-align: center; }
+.draw button {
+  font: inherit;
+  font-size: 18px;
+  background: none;
+  border: none;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--ink);
+}
+.draw button:hover { color: var(--accent); border-color: var(--accent); }
+.cup {
+  min-height: 9em;
+  max-width: 22em;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cup .line {
+  font-size: clamp(22px, 3.6vw, 34px);
+  line-height: 1.5;
+  font-weight: 700;
+  opacity: 0;
+  filter: blur(6px);
+  transition: opacity 1.6s ease, filter 1.6s ease;  /* 찻잎이 우러나듯 */
+}
+.cup .source { margin-top: 16px; opacity: 0; transition: opacity 1.2s ease 0.9s; }
+.cup.steeped .line { opacity: 1; filter: blur(0); }
+.cup.steeped .source { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .cup .line, .cup .source { transition: none; filter: none; }
+}
+
+/* 프로젝트·CV·숨은 페이지 공통 본문 */
+.article { max-width: 40em; }
+.article h1 { margin-top: 12vh; }
+.facts { display: grid; grid-template-columns: 7em 1fr; gap: 6px 16px; font-size: 15px; margin: 0 0 48px; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+figure { margin: 48px 0; }
+figure img, figure video { width: 100%; height: auto; display: block; background: var(--line); }
+figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.todo { background: #efe6c9; padding: 0 4px; }
+
+.site-footer { margin-top: 120px; font-size: 13px; color: var(--muted); }
