@@ -402,6 +402,70 @@ body.landing { padding-bottom: 0; }
   .hero .vessel .line { font-size: clamp(28px, 8vw, 40px); }
 }
 
+/* 커버: 유리다관과 인사 → Pour를 누르면 다관이 오른쪽으로 기울며 걷힘 */
+.cover {
+  position: fixed;
+  inset: 0;
+  z-index: 4;                                /* 상단 바(5)는 위에 그대로 */
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 14px;
+  padding: 72px var(--gutter) 32px;
+  background: var(--paper);
+  text-align: center;
+  transition: opacity .55s ease;
+}
+.cover-teapot {
+  position: relative;
+  width: min(62vw, 82svh, 540px);
+  height: auto;                              /* img의 height 속성(751)에 끌려 세로로 늘어나지 않게 */
+  aspect-ratio: 1586 / 992;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 18px 28px rgba(80, 70, 40, .12));
+  transform-origin: 30% 90%;                 /* 손잡이 쪽 바닥을 축으로 기울임 */
+}
+/* Pour: 손으로 들어 올리듯 살짝 떠올랐다가, 주둥이 쪽으로 천천히 기울며 화면이 넘어감 */
+@keyframes pour-lift {
+  0%   { transform: translateY(0) rotate(0deg); }
+  28%  { transform: translateY(-4%) rotate(-3deg); }       /* 들어 올리며 뒤로 살짝 */
+  100% { transform: translate(5%, -2%) rotate(24deg); }    /* 주둥이 쪽으로 기울임 */
+}
+.cover-title { font-size: clamp(26px, 3.4vw, 44px); line-height: 1.3; margin: 0; }
+.cover-sub { margin: 0; font-size: 14px; color: var(--muted); }
+.pour-btn {
+  margin-top: 18px;
+  padding: 8px 4px;
+  border: 0;
+  background: none;
+  font-family: "Junicode", serif;
+  font-stretch: 75%;
+  font-size: clamp(24px, 2.2vw, 32px);
+  color: var(--ink);
+  cursor: pointer;
+  transition: color .25s ease;
+}
+@media (hover: hover) { .pour-btn:hover { color: var(--ssuk-deep); } }
+.cover.pouring .cover-teapot { animation: pour-lift 1.1s cubic-bezier(.4, 0, .2, 1) both; }
+.cover.pouring .cover-title, .cover.pouring .cover-sub, .cover.pouring .pour-btn { opacity: 0; transition: opacity .35s ease; }
+.cover.lifting { opacity: 0; pointer-events: none; transition: opacity .7s ease; }
+.cover[hidden] { display: none; }
+/* 커버가 걷힐 때 찻잔은 빈 잔에서 시작해 차오름 */
+.cup-frame.empty .liquid { --level: -12%; }
+.cup-frame.first-pour .liquid { animation: first-pour 1.15s ease-out both; }
+@keyframes first-pour {
+  0%   { --level: -12%; --cx: 50%; --cy: 50%; }
+  25%  { --level: 50%;  --cx: calc(50% + var(--sx)); --cy: calc(50% + var(--sy)); }
+  48%  { --level: 90%;  --cx: calc(50% - var(--sx) * .6); --cy: calc(50% - var(--sy) * .6); }
+  70%  { --level: 108%; --cx: calc(50% + var(--sx) * .3); --cy: calc(50% + var(--sy) * .3); }
+  100% { --level: 114%; --cx: 50%; --cy: 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cover { transition: none; }
+  .cover.pouring .cover-teapot { animation: none; }
+  .cup-frame.first-pour .liquid { animation: none; }
+}
+
 /* 하위 페이지 제목 */
 .page-title { margin: 12vh 0 40px; }
 .vessel.steeped .source { opacity: 1; }
