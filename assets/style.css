@@ -276,7 +276,14 @@ body.landing { padding-bottom: 0; }
 }
 .hero .vessel .line .ko { font: inherit; letter-spacing: inherit; font-stretch: 100%; display: inline; transform: none; }
 .hero .vessel .source { margin: 18px 0 0; font-size: 14px; color: var(--muted); }
-.hero [data-draw] {                       /* Refill: 테두리 없이 Junicode 글자만, 올리면 김 서리듯 흐려짐 */
+/* 첫 화면 문장은 블러 없이, 살짝 떠오르며 빠르게 나타남 */
+.hero .vessel .line { filter: none; transform: translateY(8px); transition: opacity .55s ease, transform .55s ease; }
+.hero .vessel .source { filter: none; transform: translateY(6px); transition: opacity .55s ease .12s, transform .55s ease .12s; }
+.hero .vessel.steeped .line, .hero .vessel.steeped .source { filter: none; transform: none; }
+/* Refill 때는 찻물이 다 차는 순간(1.6초)에 문장도 완전히 보이도록, 차오르는 0.96초 동안 나타남 */
+.hero .vessel.refill-sync .line { transition-duration: .96s; }
+.hero .vessel.refill-sync .source { transition-duration: .84s; }
+.hero [data-draw] {                       /* Refill: 테두리 없이 Junicode 글자만, 올리면 쑥잎색 */
   grid-column: 3;
   grid-row: 1;
   justify-self: end;
@@ -290,13 +297,54 @@ body.landing { padding-bottom: 0; }
   font-size: clamp(22px, 2vw, 30px);
   letter-spacing: 0;
   color: var(--ink);
-  transition: filter .25s ease, opacity .25s ease;
+  transition: color .25s ease;
 }
-/* 마우스를 올려 둔 동안만 흐려지고, 떼면 바로 돌아옴. 터치 화면에서는 흐림이 남지 않도록 마우스 기기에서만 */
+/* 마우스를 올려 둔 동안만 쑥잎색, 떼면 바로 돌아옴. 터치 화면에서는 색이 남지 않도록 마우스 기기에서만 */
 @media (hover: hover) {
-  .hero [data-draw]:hover { filter: blur(3px); opacity: .7; color: var(--ink); }
+  .hero [data-draw]:hover { color: var(--ssuk-deep); }
 }
 @media (prefers-reduced-motion: reduce) { .hero [data-draw] { transition: none; } }
+
+/* Refill: 찻물이 바닥까지 빠졌다가 다시 차오름 (탑뷰라 수면 원이 가운데로 줄었다가 다시 넓어짐)
+   찻물 원 위에 '다 마신 잔' 사진을 겹치고, 마스크 구멍(--level) 크기로 수위를 표현.
+   빈 잔 사진은 찻잔 사진과 같은 구도라, 찻물 원 자리만 잘라 같은 위치에 맞춤 */
+@property --level { syntax: "<percentage>"; inherits: false; initial-value: 114%; }
+@property --cx { syntax: "<percentage>"; inherits: false; initial-value: 50%; }
+@property --cy { syntax: "<percentage>"; inherits: false; initial-value: 50%; }
+.liquid {
+  position: absolute;
+  left: 50.3%;
+  top: 50%;
+  width: 35.5%;                              /* 사진 속 찻물 원의 지름 */
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  --level: 114%;                             /* 평소: 흐린 경계까지 다 넘쳐서 빈 잔이 안 보임 */
+  --cx: 50%;
+  --cy: 50%;
+  --sx: 11%;                                 /* 찰랑이는 방향과 세기: draw.js가 누를 때마다 바꿈 */
+  --sy: -6%;
+  background: url("img/hero-cup-empty.jpg") 50.47% 50% / 281.7% no-repeat;   /* 사진 전체 크기 = 원 지름의 1/0.355배 */
+  filter: brightness(1.07) contrast(.96);    /* 찻잔 사진과 같은 보정 */
+  /* 수면 경계를 넓게 흐려서 물이 스며들듯 빠지고 차오르게. 차오를 때는 중심(--cx, --cy)이 무작위 방향으로 찰랑임 */
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at var(--cx) var(--cy), transparent calc(var(--level) - 14%), #000 calc(var(--level) + 10%));
+  mask-image: radial-gradient(ellipse 50% 50% at var(--cx) var(--cy), transparent calc(var(--level) - 14%), #000 calc(var(--level) + 10%));
+  pointer-events: none;
+}
+.cup-frame.refilling .liquid { animation: drain-refill 1.6s ease-in-out both; }
+@keyframes drain-refill {
+  0%   { --level: 114%; }
+  37%  { --level: -12%; }                    /* 다 비움 (0.6초) */
+  40%  { --level: -12%; --cx: 50%; --cy: 50%; }   /* 빈 잔은 아주 잠깐만 */
+  /* 다시 차오름: 앞부분에서 빠르게 대부분 차고, 뒤에서는 찰랑이며 마저 참.
+     찰랑임은 누를 때마다 script가 정한 무작위 방향(--sx, --sy)으로 쏠렸다가 반대로, 점점 잦아듦 */
+  50%  { --level: 58%;  --cx: calc(50% + var(--sx)); --cy: calc(50% + var(--sy)); }
+  63%  { --level: 92%;  --cx: calc(50% - var(--sx) * .6); --cy: calc(50% - var(--sy) * .6); }
+  76%  { --level: 108%; --cx: calc(50% + var(--sx) * .32); --cy: calc(50% + var(--sy) * .32); }
+  88%  { --level: 113%; --cx: calc(50% - var(--sx) * .12); --cy: calc(50% - var(--sy) * .12); }
+  100% { --level: 114%; --cx: 50%; --cy: 50%; }   /* 가득 (1.6초) */
+}
+@media (prefers-reduced-motion: reduce) { .cup-frame.refilling .liquid { animation: none; } }
 
 /* 찻잔에서 계속 피어오르는 김 (탑뷰)
    수면 가운데에서 작고 짙게 생겨나, 보는 사람(화면) 쪽으로 다가오듯 크게 부풀며 점점 투명해짐.
