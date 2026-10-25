@@ -151,6 +151,21 @@ h3 { font-size: 17px; line-height: 1.5; margin: 32px 0 8px; }              /* �
 .index a:hover, .index a:focus-visible { background-size: 100% 100%; color: var(--ink); }
 .index .num { color: var(--muted); }
 .index .meta { font-size: 13px; color: var(--muted); align-self: center; }
+/* WHY: 올리면 찻물이 차오르는 동안 타이틀이 그 작업의 질문으로 바뀜 (넘침은 portfolio.html의 fitWhy가 글자 크기로 맞춤) */
+.index .title { position: relative; }
+.index .t-name { transition: opacity .3s ease .1s; }
+.index .t-why {
+  position: absolute; left: 0; top: 50%; translate: 0 -50%;
+  max-width: 100%; white-space: nowrap; overflow: hidden;
+  opacity: 0; pointer-events: none;
+  transition: opacity .2s ease;
+}
+.index a:focus-visible .t-name { opacity: 0; transition: opacity .25s ease; }
+.index a:focus-visible .t-why { opacity: 1; transition: opacity .35s ease .15s; }
+@media (hover: hover) {
+  .index a:hover .t-name { opacity: 0; transition: opacity .25s ease; }
+  .index a:hover .t-why { opacity: 1; transition: opacity .35s ease .15s; }
+}
 @media (max-width: 560px) {
   .index a { grid-template-columns: 2.6em 1fr; }
   .index .meta { grid-column: 2; }
@@ -471,12 +486,13 @@ body.landing { padding-bottom: 0; }
 .page-title { margin: 12vh 0 40px; }
 .vessel.steeped .source { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
-  .vessel .line, .vessel .source, .vessel .tea, .index a { transition: none; filter: none; }
+  .vessel .line, .vessel .source, .vessel .tea, .index a, .index .t-name, .index .t-why { transition: none; filter: none; }
 }
 
 /* 프로젝트·CV·숨은 페이지 공통 본문 */
 .article { max-width: 40em; }
 .article h1 { margin-top: 12vh; }
+.article .why { font-size: clamp(18px, 2.4vw, 26px); color: var(--muted); margin: -12px 0 40px; }   /* 목차 호버 질문과 같은 문장 */
 .facts { display: grid; grid-template-columns: 7em 1fr; gap: 6px 16px; font-size: 15px; margin: 0 0 48px; }
 .facts dt { color: var(--muted); }
 .facts dd { margin: 0; }
