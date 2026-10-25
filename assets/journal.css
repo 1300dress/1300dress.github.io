@@ -92,6 +92,8 @@
   scrollbar-width: thin; scrollbar-color: var(--line) transparent;
 }
 .j-slides li { scroll-snap-align: start; }
+.j-slides.is-spread { grid-auto-columns: min(46rem, 88%); }   /* 잡지 펼침면: 한 면이 넓게, 다음 면이 살짝 보이게 */
+.j-slides a { display: block; cursor: zoom-in; }
 .j-slides:focus-visible { outline: 2px solid var(--ssuk); outline-offset: 4px; }
 
 .j-grid-list {                               /* 표지 모음·문장뽑기 띠·릴스 묶음: 칸 수는 블록마다 --cols / --mcols */

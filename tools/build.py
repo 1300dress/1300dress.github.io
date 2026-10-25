@@ -63,10 +63,19 @@ def block(b):
         return (f'  <figure class="j-fig j-pair is-{b.get("width", "wide")}{dummy}">\n    <div class="j-pair-row">\n    {imgs}\n    </div>'
                 f'{caption(b.get("caption"))}\n  </figure>')
     if t == "carousel":
-        slides = "\n      ".join(f'<li>{img(i)}</li>' for i in b["items"])
+        # size: "spread"면 잡지 펼침면처럼 넓은 낱장, zoom이면 낱장을 누르면 원본 크기로 열림
+        def slide(i):
+            im = img(i)
+            if b.get("zoom"):
+                im = f'<a href="{esc(media_src(i["src"]))}" target="_blank" rel="noopener" aria-label="{esc(i.get("alt", ""))} 크게 보기">{im}</a>'
+            return f'<li>{im}</li>'
+        slides = "\n      ".join(slide(i) for i in b["items"])
         n = len(b["items"])
-        hint = f'<span class="j-cap-hint">{n}장 · 옆으로 넘겨 보기</span>'
-        return (f'  <figure class="j-fig j-carousel is-wide{dummy}">\n    <ol class="j-slides" tabindex="0" aria-label="캐러셀 {n}장">\n      {slides}\n    </ol>'
+        spread = b.get("size") == "spread"
+        unit = "펼침" if spread else "장"
+        hint = f'<span class="j-cap-hint">{n}{unit} · 옆으로 넘겨 보기{" · 누르면 크게" if b.get("zoom") else ""}</span>'
+        size = " is-spread" if spread else ""
+        return (f'  <figure class="j-fig j-carousel is-wide{dummy}">\n    <ol class="j-slides{size}" tabindex="0" aria-label="캐러셀 {n}{unit}">\n      {slides}\n    </ol>'
                 f'{caption(hint + (b.get("caption") or ""))}\n  </figure>')
     if t == "video":
         ratio = b.get("ratio", "16:9")
