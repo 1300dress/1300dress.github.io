@@ -81,6 +81,10 @@
       "text": "같은 장소도 무엇을 보고 듣고 느끼느냐에 따라 전혀 다른 이야기가 되기 때문입니다. 이를 바탕으로 24곳의 로컬 브랜드를 취재하고 소상공인과 주민들의 목소리를 담았습니다."
     },
     {
+      "type": "p",
+      "text": "<strong>편집장으로서 29명의 에디터가 참여하는 8개 팀의 작업을 이끌었습니다.</strong> 총 61회의 회의를 거쳐 취재 내용을 정리하고 각기 다른 필자의 시선이 하나의 잡지 안에서 연결될 수 있도록 편집 방향을 조율했습니다."
+    },
+    {
       "type": "image",
       "src": "assets/media/04/toc-mockup.jpg",
       "alt": "〈신감각, 신당동〉 목차 펼침면 목업",
@@ -104,13 +108,6 @@
           "ratio": "60:41"
         }
       ]
-    },
-    {
-      "type": "image",
-      "src": "assets/media/04/sight-mockup.jpg",
-      "alt": "Sight 챕터 여는 펼침면 목업",
-      "width": "wide",
-      "caption": "01 Sight · 시각 · 챕터 여는 면"
     },
     {
       "type": "carousel",
@@ -205,13 +202,6 @@
       "text": "Sight · 시각에서는 서울중앙시장의 낮과 밤을 비롯해 오래된 상권과 새로운 도시 풍경을 함께 바라봤습니다."
     },
     {
-      "type": "image",
-      "src": "assets/media/04/scent-mockup.jpg",
-      "alt": "Scent 챕터 여는 펼침면 목업",
-      "width": "wide",
-      "caption": "02 Scent · 후각 · 챕터 여는 면"
-    },
-    {
       "type": "carousel",
       "size": "spread",
       "zoom": true,
@@ -304,13 +294,6 @@
       "text": "Scent · 후각에서는 세실앤세드릭과 소수책방 등 저마다의 취향이 짙게 배어 있는 공간을 찾았습니다."
     },
     {
-      "type": "image",
-      "src": "assets/media/04/savor-mockup.jpg",
-      "alt": "Savor 챕터 여는 펼침면 목업",
-      "width": "wide",
-      "caption": "03 Savor · 미각 · 챕터 여는 면"
-    },
-    {
       "type": "carousel",
       "size": "spread",
       "zoom": true,
@@ -386,13 +369,6 @@
     {
       "type": "p",
       "text": "Savor · 미각에서는 아침부터 새벽까지 시간의 흐름을 따라 신당동의 맛을 기록했습니다."
-    },
-    {
-      "type": "image",
-      "src": "assets/media/04/sound-mockup.jpg",
-      "alt": "Sound 챕터 여는 펼침면 목업",
-      "width": "wide",
-      "caption": "04 Sound · 청각 · 챕터 여는 면"
     },
     {
       "type": "carousel",
@@ -475,13 +451,6 @@
     {
       "type": "p",
       "text": "Sound · 청각에서는 LP바와 청계천을 찾아가 동네가 품은 소리와 분위기에 귀를 기울였습니다."
-    },
-    {
-      "type": "image",
-      "src": "assets/media/04/society-mockup.jpg",
-      "alt": "Society 챕터 여는 펼침면 목업",
-      "width": "wide",
-      "caption": "05 Society · 촉각 · 챕터 여는 면"
     },
     {
       "type": "carousel",
@@ -573,33 +542,6 @@
     {
       "type": "p",
       "text": "다섯 챕터는 서로 다른 감각에서 출발하지만 결국 하나의 질문으로 이어집니다. 사람들은 이 동네에서 무엇을 느끼고 어떤 삶을 만들어 가고 있을까?"
-    },
-    {
-      "type": "carousel",
-      "size": "spread",
-      "zoom": true,
-      "caption": "에디터 소개 · 감각별 다섯 팀 · 154–159쪽",
-      "items": [
-        {
-          "src": "assets/media/04/spreads/p154-155.jpg",
-          "alt": "에디터 소개 154–155쪽",
-          "ratio": "60:41"
-        },
-        {
-          "src": "assets/media/04/spreads/p156-157.jpg",
-          "alt": "에디터 소개 156–157쪽",
-          "ratio": "60:41"
-        },
-        {
-          "src": "assets/media/04/spreads/p158-159.jpg",
-          "alt": "에디터 소개 158–159쪽",
-          "ratio": "60:41"
-        }
-      ]
-    },
-    {
-      "type": "p",
-      "text": "<strong>편집장으로서 29명의 에디터가 참여하는 8개 팀의 작업을 이끌었습니다.</strong> 총 61회의 회의를 거쳐 취재 내용을 정리하고 각기 다른 필자의 시선이 하나의 잡지 안에서 연결될 수 있도록 편집 방향을 조율했습니다."
     },
     {
       "type": "p",
