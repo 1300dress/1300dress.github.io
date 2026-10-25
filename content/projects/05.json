@@ -36,6 +36,10 @@
       "type": "facts",
       "items": [
         {
+          "label": "광고주",
+          "value": "다이슨"
+        },
+        {
           "label": "캠페인",
           "value": "Airwrap Co-anda 2x 국내 론칭 캠페인"
         },
@@ -124,6 +128,10 @@
     {
       "type": "facts",
       "items": [
+        {
+          "label": "광고주",
+          "value": "네이버 지도"
+        },
         {
           "label": "캠페인",
           "value": "BE LOCAL 캠페인 · 서울 · 부산"
@@ -237,6 +245,10 @@
     {
       "type": "facts",
       "items": [
+        {
+          "label": "광고주",
+          "value": "삼양"
+        },
         {
           "label": "프로젝트",
           "value": "Tangle · Buldak Swicy · Global Brand Guide"
