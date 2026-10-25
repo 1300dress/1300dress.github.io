@@ -1,0 +1,135 @@
+{
+  "num": "04",
+  "status": "dummy",
+  "category": "Independent Magazine · Publishing",
+  "title": "신감각, 신당동",
+  "why": "왜 신당동을 이야기할 때는 늘 트렌드부터 말할까?",
+  "dek": "뜨는 동네를 유행이 아니라, 새것과 오래된 것이 만나는 골목의 언어로 읽기. 신당동이 일깨우는 다섯 가지 감각으로 엮은 독립잡지다.",
+  "meta": [
+    {
+      "label": "기간",
+      "value": "2023.01 – 2023.06"
+    },
+    {
+      "label": "소속",
+      "value": "애드파워 68대 대외협력팀 메인 프로젝트"
+    },
+    {
+      "label": "역할",
+      "value": "편집장 · 기획 · 원고"
+    },
+    {
+      "label": "형식",
+      "value": "독립잡지 · 텀블벅 펀딩"
+    }
+  ],
+  "body": [
+    {
+      "type": "section",
+      "label": "Situation",
+      "title": "트렌드라는 이름의 첫 문장"
+    },
+    {
+      "type": "p",
+      "text": "동네가 이야기될 때 첫 문장은 대개 '요즘 뜨는'으로 시작한다. 새로 생긴 가게와 줄 서는 풍경이 먼저 소개되고, 그 골목을 오래 지켜 온 사람들의 시간은 뒤로 밀린다. (임시 원고)",
+      "dummy": true
+    },
+    {
+      "type": "p",
+      "text": "이 문단에는 왜 신당동이었는지, 그리고 기존의 동네 콘텐츠가 놓치고 있다고 본 것이 무엇이었는지가 들어간다.",
+      "dummy": true
+    },
+    {
+      "type": "image",
+      "src": "assets/dummy/img-21x9-2.svg",
+      "alt": "임시 이미지",
+      "width": "full",
+      "caption": "임시 이미지 · 신당동 골목 사진이 화면 끝까지 들어갈 자리",
+      "dummy": true
+    },
+    {
+      "type": "section",
+      "label": "Solution",
+      "title": "다섯 가지 감각으로 읽는 골목"
+    },
+    {
+      "type": "p",
+      "text": "신당동이 일깨우는 감각을 시각·후각·미각·청각·촉각 5개 챕터로 구성하고, 로컬 브랜드 24곳 취재기와 소상공인·주민 인터뷰를 수록했다. 에디터 29명이 8개 팀으로 나뉘어 61번 회의했다.",
+      "dummy": false
+    },
+    {
+      "type": "pair",
+      "width": "wide",
+      "caption": "임시 이미지 · 잡지 펼침면 두 쪽이 들어갈 자리",
+      "dummy": true,
+      "items": [
+        {
+          "src": "assets/dummy/img-3x4-1.svg",
+          "alt": "임시 이미지"
+        },
+        {
+          "src": "assets/dummy/img-3x4-2.svg",
+          "alt": "임시 이미지"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "이 문단에는 편집장으로서 내린 결정 한두 가지가 들어간다. 다섯 감각이라는 틀을 정한 이유, 챕터의 순서, 직접 쓴 지면이 어디인지를 구체적으로 적는다. (임시 원고)",
+      "dummy": true
+    },
+    {
+      "type": "quote",
+      "text": "새것과 오래된 것이 만나는 골목의 언어로 읽기.",
+      "cite": "기획 의도",
+      "dummy": true
+    },
+    {
+      "type": "p",
+      "text": "스티커·엽서·포스터·문진 후원 리워드도 기획했다.",
+      "dummy": false
+    },
+    {
+      "type": "image",
+      "src": "assets/dummy/img-3x2-3.svg",
+      "alt": "임시 이미지",
+      "width": "wide",
+      "caption": "임시 이미지 · 후원 리워드 사진이 들어갈 자리",
+      "dummy": true
+    },
+    {
+      "type": "section",
+      "label": "Result",
+      "title": "펀딩과 서가"
+    },
+    {
+      "type": "p",
+      "text": "텀블벅 펀딩 163%를 달성했다(1,550,000원 · 후원자 79명, 2023.06.05–07.03). 홍보 계정의 월간 도달은 4.3k, 릴스 최고 조회는 1.27k였고, 종이잡지클럽 서울·제주에 입고됐다.",
+      "dummy": false
+    },
+    {
+      "type": "image",
+      "src": "assets/dummy/img-4x5-1.svg",
+      "alt": "임시 이미지",
+      "width": "small",
+      "caption": "임시 이미지 · 종이잡지클럽 서가 사진이 들어갈 자리",
+      "dummy": true
+    },
+    {
+      "type": "p",
+      "text": "이 문단에는 후원자를 움직인 것이 무엇이었는지에 대한 해석과, 다음 잡지를 만든다면 바꿀 것 한 가지가 들어간다. (임시 원고)",
+      "dummy": true
+    }
+  ],
+  "credits": [
+    {
+      "label": "펀딩",
+      "value": "텀블벅 프로젝트",
+      "href": "https://tumblbug.com/senseindang/story"
+    },
+    {
+      "label": "참여",
+      "value": "에디터 29명 · 8개 팀"
+    }
+  ]
+}

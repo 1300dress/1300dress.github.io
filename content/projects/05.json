@@ -1,0 +1,116 @@
+{
+  "num": "05",
+  "status": "dummy",
+  "category": "Two Rabbits · Campaign / Production",
+  "title": "브랜드 캠페인 제작·운영",
+  "why": "왜 카피라이터의 일은 카피에서 끝나야 할까?",
+  "dek": "카피는 한 줄로 끝나지만 캠페인은 그 한 줄이 영상과 KV, 매체에 실려 고객에게 닿을 때까지 이어진다. 광고대행사 투래빗츠에서 맡은 브랜드 캠페인의 제작과 운영을 정리한다. (임시 도입문)",
+  "meta": [
+    {
+      "label": "소속",
+      "value": "투래빗츠 · 카피라이터"
+    },
+    {
+      "label": "기간",
+      "value": "2024.07 – 현재"
+    },
+    {
+      "label": "브랜드",
+      "value": "다이슨 · 삼양 · IGIN"
+    },
+    {
+      "label": "역할",
+      "value": "카피 개발 · 영상 비주얼 검수 · 최종 출고 · 캠페인 운영"
+    }
+  ],
+  "body": [
+    {
+      "type": "section",
+      "label": "Situation",
+      "title": "한 줄 다음에 오는 일들"
+    },
+    {
+      "type": "p",
+      "text": "카피라이터의 일은 흔히 문장을 쓰는 데서 끝난다고 여겨진다. 하지만 그 문장이 영상의 자막이 되고 KV의 헤드라인이 되어 실제로 출고되기까지는 수많은 확인과 조율이 남는다. (임시 원고)",
+      "dummy": true
+    },
+    {
+      "type": "p",
+      "text": "이 문단에는 맡은 캠페인들이 어떤 상황에서 시작됐는지, 공개 가능한 범위 안에서 적는다.",
+      "dummy": true
+    },
+    {
+      "type": "section",
+      "label": "Solution",
+      "title": "카피에서 출고까지"
+    },
+    {
+      "type": "p",
+      "text": "다이슨 국내 론칭 IMC(2025–2026)에서는 카피 개발, 영상 비주얼 검수, 최종 출고를 맡았다.",
+      "dummy": false
+    },
+    {
+      "type": "video",
+      "src": "assets/dummy/dummy-16x9.mp4",
+      "poster": "assets/dummy/poster-16x9.svg",
+      "ratio": "16:9",
+      "caption": "임시 영상 · 공개된 캠페인 영상이 들어갈 자리. 16:9 원본 비율 유지.",
+      "dummy": true
+    },
+    {
+      "type": "p",
+      "text": "이 문단에는 영상과 KV에서 카피가 어떻게 쓰였는지, 검수 과정에서 무엇을 지켰는지가 들어간다. 공개된 결과물만 다룬다. (임시 원고)",
+      "dummy": true
+    },
+    {
+      "type": "pair",
+      "width": "wide",
+      "caption": "임시 이미지 · 공개된 KV 두 장이 들어갈 자리",
+      "dummy": true,
+      "items": [
+        {
+          "src": "assets/dummy/img-4x5-3.svg",
+          "alt": "임시 이미지"
+        },
+        {
+          "src": "assets/dummy/img-4x5-1.svg",
+          "alt": "임시 이미지"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "삼양에서는 글로벌 브랜드 가이드 제작을, IGIN에서는 론칭 캠페인 운영을 맡았다.",
+      "dummy": false
+    },
+    {
+      "type": "image",
+      "src": "assets/dummy/img-3x2-2.svg",
+      "alt": "임시 이미지",
+      "width": "text",
+      "caption": "임시 이미지 · 브랜드 가이드의 공개 가능한 페이지가 들어갈 자리",
+      "dummy": true
+    },
+    {
+      "type": "section",
+      "label": "Result",
+      "title": "브랜드의 말로 끝까지"
+    },
+    {
+      "type": "p",
+      "text": "결과 단락에는 공개 가능한 성과와, 카피에서 출고까지 이어지는 일을 하며 배운 것이 들어간다. 클라이언트 정보는 공개된 범위만 적는다. (임시 원고)",
+      "dummy": true
+    }
+  ],
+  "credits": [
+    {
+      "label": "소속",
+      "value": "투래빗츠 (광고대행사)"
+    },
+    {
+      "label": "공개 범위",
+      "value": "<span class=\"todo\">공개 가능한 결과물 확인</span>",
+      "todo": "공개 가능한 결과물 확인"
+    }
+  ]
+}

@@ -4,7 +4,9 @@
 
 ## 구조
 - `index.html`: 번호 목록 + 문장 뽑기
-- `projects/01.html`: 프로젝트 페이지 템플릿 (복사해서 02, 03… 만들기)
+- `projects/01~06.html`: 프로젝트 상세(저널). 직접 고치지 말고 `content/projects/NN.json`을 고친 뒤 `python3 tools/build.py` (자세한 건 `content/README.md`)
+- `assets/journal.css`: 상세 페이지 저널 레이아웃
+- `assets/dummy/`: 레이아웃 확인용 임시 이미지·영상 (실제 자료로 바꾸면 지움)
 - `cv.html`: 이력서
 - `magpie-and-tiger.html`: 지원처 전용 숨은 페이지 (noindex, 메인에서 링크하지 않음)
 - `assets/lines.js`: 문장 뽑기 목록

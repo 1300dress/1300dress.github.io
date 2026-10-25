@@ -1,0 +1,163 @@
+{
+  "num": "03",
+  "status": "dummy",
+  "category": "Saengmag · Interview / Press",
+  "title": "아티스트 인터뷰와 페스티벌 취재",
+  "why": "왜 인터뷰는 길고 무거워야 할까?",
+  "dek": "한 사람을 제대로 보여 주려면 긴 지면이 필요하다는 생각이 있다. 이 섹션은 롱폼 인터뷰 〈취중잡담〉, 숏폼 인터뷰 〈9문9답〉, 그리고 페스티벌 프레스 현장을 한 흐름으로 묶는다. (임시 도입문)",
+  "meta": [
+    {
+      "label": "매체",
+      "value": "생맥(@saengmag) · 매들리메들리, 랩비트 등"
+    },
+    {
+      "label": "형식",
+      "value": "롱폼 인터뷰 · 숏폼 인터뷰 · 프레스 릴스"
+    },
+    {
+      "label": "역할",
+      "value": "인터뷰 기획 · 원고 / 프레스 릴스 촬영 · 편집"
+    },
+    {
+      "label": "기간",
+      "value": "",
+      "todo": "기간"
+    }
+  ],
+  "body": [
+    {
+      "type": "section",
+      "label": "Situation",
+      "title": "들인 품과 돌아온 반응 사이"
+    },
+    {
+      "type": "p",
+      "text": "롱폼 인터뷰 '취중잡담'은 들인 품에 비해 반응이 따라오지 않았다.",
+      "dummy": false
+    },
+    {
+      "type": "p",
+      "text": "이 문단에는 그 간극을 처음 알아챈 순간과, 당시 롱폼 인터뷰가 어떤 방식으로 만들어지고 있었는지가 들어간다. 섭외부터 발행까지의 과정을 짧게 적는다. (임시 원고)",
+      "dummy": true
+    },
+    {
+      "type": "image",
+      "src": "assets/dummy/img-21x9-1.svg",
+      "alt": "임시 이미지",
+      "width": "wide",
+      "caption": "임시 이미지 · 〈취중잡담〉 대표 회차가 들어갈 자리",
+      "dummy": true
+    },
+    {
+      "type": "section",
+      "label": "Solution",
+      "title": "아홉 개의 질문, 그리고 현장"
+    },
+    {
+      "type": "p",
+      "text": "아홉 개의 질문으로 인물을 보여주는 숏폼 인터뷰 '9문9답'을 자체 기획했다. 최근에는 공개된 기록을 모아 편집자 관점의 인물 칼럼을 실험하고 있다.",
+      "dummy": false
+    },
+    {
+      "type": "carousel",
+      "caption": "임시 이미지 · 〈9문9답〉 한 회차의 아홉 장이 들어갈 자리",
+      "dummy": true,
+      "items": [
+        {
+          "src": "assets/dummy/img-4x5-1.svg",
+          "alt": "임시 캐러셀 1장"
+        },
+        {
+          "src": "assets/dummy/img-4x5-2.svg",
+          "alt": "임시 캐러셀 2장"
+        },
+        {
+          "src": "assets/dummy/img-4x5-3.svg",
+          "alt": "임시 캐러셀 3장"
+        },
+        {
+          "src": "assets/dummy/img-4x5-1.svg",
+          "alt": "임시 캐러셀 4장"
+        },
+        {
+          "src": "assets/dummy/img-4x5-2.svg",
+          "alt": "임시 캐러셀 5장"
+        },
+        {
+          "src": "assets/dummy/img-4x5-3.svg",
+          "alt": "임시 캐러셀 6장"
+        },
+        {
+          "src": "assets/dummy/img-4x5-1.svg",
+          "alt": "임시 캐러셀 7장"
+        },
+        {
+          "src": "assets/dummy/img-4x5-2.svg",
+          "alt": "임시 캐러셀 8장"
+        },
+        {
+          "src": "assets/dummy/img-4x5-3.svg",
+          "alt": "임시 캐러셀 9장"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "이 문단에는 왜 하필 아홉 개의 질문이었는지, 질문을 고르는 기준과 순서를 어떻게 정했는지가 들어간다. (임시 원고)",
+      "dummy": true
+    },
+    {
+      "type": "video",
+      "src": "assets/dummy/dummy-9x16.mp4",
+      "poster": "assets/dummy/poster-9x16.svg",
+      "ratio": "9:16",
+      "caption": "임시 영상 · 숏폼 인터뷰 영상이 들어갈 자리. 9:16 원본 비율 유지.",
+      "dummy": true,
+      "layout": "aside"
+    },
+    {
+      "type": "p",
+      "text": "페스티벌 프레스는 정기 프레스 참여 현장을 릴스로 옮기는 작업이었다. 아이폰으로 촬영하고 프리미어로 편집했다.",
+      "dummy": false
+    },
+    {
+      "type": "video",
+      "src": "assets/dummy/dummy-16x9.mp4",
+      "poster": "assets/dummy/poster-16x9.svg",
+      "ratio": "16:9",
+      "caption": "임시 영상 · 페스티벌 현장 영상이 들어갈 자리. 가로 16:9 원본 비율 유지.",
+      "dummy": true
+    },
+    {
+      "type": "p",
+      "text": "현장에서 무엇을 담고 무엇을 덜어 냈는지, 짧은 영상 안에서 아티스트와 관객을 어떻게 함께 보여 줬는지를 적는 문단이다. (임시 원고)",
+      "dummy": true
+    },
+    {
+      "type": "section",
+      "label": "Result",
+      "title": "가벼워진 형식, 남은 사람"
+    },
+    {
+      "type": "p",
+      "text": "결과 단락에는 롱폼과 9문9답의 숫자 비교(저장, 공유, 롱폼 대비 배수), 그리고 무엇이 반응을 바꿨는지에 대한 해석이 들어간다. 확인한 값만 적는다.",
+      "dummy": true
+    },
+    {
+      "type": "quote",
+      "text": "실패와 도전을 크게 나누지 않는다. 숫자로 확인하고, 다음 콘텐츠에서 하나를 바꾼다.",
+      "dummy": false
+    }
+  ],
+  "credits": [
+    {
+      "label": "매체",
+      "value": "생맥(@saengmag)",
+      "href": "https://www.instagram.com/saengmag/"
+    },
+    {
+      "label": "프레스",
+      "value": "매들리메들리, 랩비트 등"
+    }
+  ]
+}

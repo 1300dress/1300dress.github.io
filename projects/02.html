@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>월간 문장뽑기 — 조수빈</title>
+  <meta name="description" content="왜 텍스트는 릴스에서 살아남기 어렵다고 생각할까?">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/icon-192.png">
@@ -12,8 +13,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/journal.css">
 </head>
 <body>
+  <!-- 이 파일은 tools/build.py가 content/projects/02.json으로 만듭니다. 직접 고치지 말고 JSON을 고친 뒤 다시 빌드하세요. -->
   <header class="site-header">
     <a class="name logo" href="../index.html" aria-label="subin teahouse — 조수빈, 홈으로"><img class="logo-mark" src="../assets/img/name.png" alt="" width="539" height="101"></a>
     <nav class="site-nav">
@@ -23,36 +26,72 @@
     </nav>
   </header>
 
-      <main class="article">
-    <p class="caption"><span class="num">(2)</span></p>
-    <h1>월간 문장뽑기</h1>
-    <p class="why title">왜 텍스트는 릴스에서 살아남기 어렵다고 생각할까?</p>
-
-    <dl class="facts">
-      <dt>매체</dt><dd>생맥(@saengmag)</dd>
-      <dt>형식</dt><dd>인스타그램 릴스 · 정기 시리즈</dd>
-      <dt>역할</dt><dd><span class="todo">기획·원고·촬영·편집·발행 중 맡은 것</span></dd>
-      <dt>담당 범위</dt><dd><span class="todo">직접 한 일 / 하지 않은 일</span></dd>
-      <dt>결과</dt><dd>조회 <span class="todo">__</span> · 저장 <span class="todo">__</span> · 공유 <span class="todo">__</span></dd>
+  <article class="journal">
+  <header class="j-head">
+    <p class="j-notice">임시 시안 · 이 페이지의 글·이미지·영상은 레이아웃 확인용 더미입니다. 실제 원고와 결과물로 바뀔 예정입니다.</p>
+    <p class="j-kicker"><span class="num">(2)</span> · Saengmag · Reels Series</p>
+    <h1 class="j-title">월간 문장뽑기</h1>
+    <p class="j-why">왜 텍스트는 릴스에서 살아남기 어렵다고 생각할까?</p>
+    <p class="j-dek">릴스는 움직이는 이미지와 소리의 형식이라 글이 설 자리가 없다고들 한다. 〈월간 문장뽑기〉는 그 통념을 시리즈로 시험해 본 정기 릴스다. (임시 도입문)</p>
+    <dl class="j-meta">
+      <div><dt>매체</dt><dd>생맥(@saengmag)</dd></div>
+      <div><dt>형식</dt><dd>인스타그램 릴스 · 정기 시리즈</dd></div>
+      <div><dt>역할</dt><dd><span class="todo">맡은 역할</span></dd></div>
+      <div><dt>주기</dt><dd><span class="todo">발행 주기 · 회차</span></dd></div>
     </dl>
-    <figure>
-      <img src="" alt="〈월간 문장뽑기〉 대표 회차">
-      <figcaption><span class="todo">대표 회차 3–4개의 장면 또는 영상</span></figcaption>
-    </figure>
-    <h2>과제</h2>
-    <p><span class="todo">시리즈 소개 한 줄, 몇 회째인지</span></p>
-    <h2>관점</h2>
-    <p><span class="todo">이 형식을 고른 이유, 독자가 끝까지 보게 만든 장치</span></p>
-    <h2>제작</h2>
-    <p><span class="todo">한 편이 나오기까지: 문장 선정 → 촬영 → 편집 → 발행 순서와 주기</span></p>
-    <h2>결과</h2>
-    <p><span class="todo">회차별 조회·저장 추이</span></p>
-    <p><span class="todo">결과 해석: 잘 된 회차와 안 된 회차의 차이</span></p>
-    <h2>회고</h2>
-    <p><span class="todo">다음에 바꿀 것 한 가지</span></p>
-  </main>
+  </header>
 
-  <footer class="site-footer"><a href="../portfolio.html">← Portfolio</a></footer>
+  <h2 class="j-sec" id="situation"><span class="j-sec-label">Situation</span><span class="j-sec-title">읽는 콘텐츠는 영상에서 밀려난다</span></h2>
+
+  <p class="j-p is-dummy">화면이 움직이기 시작하면 글은 자막으로 물러난다. 텍스트 중심의 매체가 릴스로 옮겨 갈 때 가장 먼저 잃는 것은 문장 자체의 힘이다. 이 문단에는 시리즈를 시작하기 전 생맥의 릴스가 어떤 모습이었는지가 들어간다. (임시 원고)</p>
+
+  <p class="j-p is-dummy">독자는 문장을 좋아했지만, 문장을 보여 주는 방식은 여전히 정지된 이미지에 머물러 있었다. 그 간극을 어떻게 메울지가 출발점이었다.</p>
+
+  <figure class="j-fig is-text is-dummy">
+    <img src="../assets/dummy/img-16x9-2.svg" alt="임시 이미지" loading="lazy">
+    <figcaption class="j-cap">임시 이미지 · 시리즈 시작 전 릴스 화면이 들어갈 자리</figcaption>
+  </figure>
+
+  <h2 class="j-sec" id="solution"><span class="j-sec-label">Solution</span><span class="j-sec-title">문장을 주인공으로 세우는 편집</span></h2>
+
+  <p class="j-p is-dummy">문장이 영상의 장식이 아니라 주인공이 되도록, 화면의 움직임을 줄이고 읽는 속도에 맞춰 컷을 나누는 방식을 생각했다. 이 문단에는 한 편이 만들어지는 순서가 들어간다. (임시 원고)</p>
+
+  <figure class="j-fig j-video is-vertical is-text is-aside is-dummy">
+    <div class="j-frame" style="aspect-ratio: 9 / 16"><video controls playsinline preload="metadata" poster="../assets/dummy/poster-9x16.svg"><source src="../assets/dummy/dummy-9x16.mp4" type="video/mp4"></video></div>
+    <figcaption class="j-cap">임시 영상 · 〈월간 문장뽑기〉 대표 회차가 들어갈 자리. 세로 9:16 원본 비율을 유지한다.</figcaption>
+  </figure>
+
+  <p class="j-p is-dummy">문장을 고르는 기준, 화면에 남길 글자 수, 음악과 컷의 길이처럼 반복되는 시리즈에서 지켜 온 규칙을 적는 문단이다. 정기 시리즈인 만큼 매회 바뀌는 것과 바뀌지 않는 것을 나누어 쓴다.</p>
+
+  <figure class="j-fig j-pair is-text is-dummy">
+    <div class="j-pair-row">
+    <img src="../assets/dummy/img-9x16-1.svg" alt="임시 이미지" loading="lazy">
+    <img src="../assets/dummy/img-9x16-2.svg" alt="임시 이미지" loading="lazy">
+    </div>
+    <figcaption class="j-cap">임시 이미지 · 회차별 첫 장면 비교가 들어갈 자리</figcaption>
+  </figure>
+
+  <p class="j-p is-dummy">이 문단에는 제작 과정에서 가장 오래 고민한 결정 하나를 구체적으로 적는다. (임시 원고)</p>
+
+  <h2 class="j-sec" id="result"><span class="j-sec-label">Result</span><span class="j-sec-title">끝까지 읽힌 문장</span></h2>
+
+  <p class="j-p is-dummy">결과 단락에는 회차별 조회·저장·공유의 흐름과, 잘 된 회차와 그렇지 않은 회차의 차이를 숫자로 확인한 내용이 들어간다. 확인한 값만 적는다.</p>
+
+  <p class="j-p is-dummy">마지막으로 다음 회차에서 바꿀 것 한 가지를 적는다. (임시 원고)</p>
+
+  <footer class="j-foot">
+    <dl class="j-credits">
+      <div><dt>매체</dt><dd><a href="https://www.instagram.com/saengmag/">생맥(@saengmag)</a></dd></div>
+    </dl>
+    <nav class="j-nav" aria-label="다른 프로젝트">
+      <a class="j-nav-prev" href="01.html" rel="prev"><span class="j-nav-dir">← 이전 · (1)</span><span class="j-nav-title title">생맥 오리지널 에디토리얼</span><span class="j-nav-why">왜 1080×1350에는 진정성을 담을 수 없다고 생각할까?</span></a>
+      <a class="j-nav-next" href="03.html" rel="next"><span class="j-nav-dir">다음 → · (3)</span><span class="j-nav-title title">아티스트 인터뷰와 페스티벌 취재</span><span class="j-nav-why">왜 인터뷰는 길고 무거워야 할까?</span></a>
+    </nav>
+    <p class="j-back"><a href="../portfolio.html">Portfolio 전체 보기</a></p>
+  </footer>
+  </article>
+
+  <footer class="site-footer">© 조수빈 · 한 잔이 나가기 전, 마지막을 살핍니다.</footer>
   <script src="../assets/ko-wrap.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600">
+  <defs><pattern id="p" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <line x1="0" y1="0" x2="0" y2="28" stroke="#56622f" stroke-opacity=".07" stroke-width="10"/></pattern></defs>
+  <rect width="100%" height="100%" fill="#e6e8de"/><rect width="100%" height="100%" fill="url(#p)"/>
+  <g font-family="Pretendard, -apple-system, sans-serif" text-anchor="middle" fill="#56622f">
+    <text x="50%" y="781" font-size="64" font-weight="600">임시 영상 ▶</text>
+    <text x="50%" y="858" font-size="32" fill="#7b8178">9:16 · 실제 결과물 아님</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
+  <defs><pattern id="p" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <line x1="0" y1="0" x2="0" y2="28" stroke="#56622f" stroke-opacity=".07" stroke-width="10"/></pattern></defs>
+  <rect width="100%" height="100%" fill="#e2e5dc"/><rect width="100%" height="100%" fill="url(#p)"/>
+  <g font-family="Pretendard, -apple-system, sans-serif" text-anchor="middle" fill="#56622f">
+    <text x="50%" y="479" font-size="71" font-weight="600">임시 이미지</text>
+    <text x="50%" y="564" font-size="36" fill="#7b8178">3:2 · 실제 결과물 아님</text>
+  </g>
+</svg>

@@ -1,0 +1,125 @@
+/* 프로젝트 상세 = 한 편의 긴 저널 (참고: Frank Chimero, What Screens Want)
+   좁은 본문 칼럼 하나를 따라 읽고, 사진·영상은 칼럼 폭 · 넓게 · 화면 끝까지 · 작게로 리듬을 바꿔 끼어듭니다.
+   카드·상자 없이 글자와 여백만으로 나눕니다. 색과 서체는 style.css의 변수를 그대로 씁니다. */
+.journal {
+  --col: 36rem;                            /* 본문 칼럼: 한 줄 34~38자 */
+  --wide: 62rem;                           /* 넓은 사진·영상 */
+  --side: calc((var(--wide) - var(--col)) / 2);
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--gutter), 1fr)
+    [wide-start] minmax(0, var(--side))
+    [text-start] min(var(--col), 100% - 2 * var(--gutter)) [text-end]
+    minmax(0, var(--side)) [wide-end]
+    minmax(var(--gutter), 1fr) [full-end];
+  margin-inline: calc(-1 * var(--gutter));  /* body 여백 밖까지 써야 화면 끝까지 닿는 사진이 가능 */
+  font-size: 17px;
+  line-height: 1.85;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.journal > * { grid-column: text; }
+
+/* ── A. 머리: 번호·분류 → 제목 → WHY → 도입 → 최소 정보 ── */
+.j-head { padding-top: 12vh; margin-bottom: 72px; }
+.j-notice { display: inline-block; margin: 0 0 40px; padding: 2px 8px; font-size: 13px; line-height: 1.6; color: var(--ssuk-deep); background: var(--ssuk-wash); border-radius: 3px; }
+.j-kicker { margin: 0 0 18px; font-size: 13px; color: var(--muted); }
+.j-title { margin: 0; font-size: clamp(34px, 6vw, 60px); line-height: 1.25; max-width: none; }
+.j-why {                                     /* 목차 호버 질문과 같은 얼굴(프리텐다드 · 쑥잎색), 여기서는 크게 */
+  margin: 28px 0 0;
+  font-size: clamp(21px, 2.8vw, 28px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  color: var(--ssuk-deep);
+}
+.j-dek { margin: 32px 0 0; font-size: 19px; line-height: 1.8; }
+.j-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;          /* 정보 네 줄을 2×2로: 하나만 아랫줄에 남지 않게 */
+  gap: 18px 24px;
+  margin: 48px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.j-meta dt, .j-credits dt { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.j-meta dd, .j-credits dd { margin: 0; }
+
+/* ── B. 본문 ── */
+.j-p { margin: 0 0 1.35em; }
+.j-sec {                                     /* Situation · Solution · Result: 상자 대신 짧은 선과 작은 이름표 */
+  margin: 96px 0 28px;
+  font-size: inherit;
+  line-height: 1.4;
+  text-align: left;
+}
+.j-sec::before { content: ""; display: block; width: 2.5rem; height: 1px; background: var(--ssuk); margin-bottom: 22px; }
+.j-sec-label { display: block; font-family: "Junicode", serif; font-stretch: 75%; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ssuk-deep); }
+.j-sec-title { display: block; margin-top: 10px; font-size: clamp(22px, 2.6vw, 28px); }
+.j-break { width: 10rem; margin: 64px auto; border: 0; border-top: 1px solid var(--line); }
+
+.j-quote { margin: 56px 0; padding: 0; }
+.j-quote p { margin: 0; font-family: var(--font-title); font-size: clamp(22px, 2.8vw, 28px); line-height: 1.55; }
+.j-quote cite { display: block; margin-top: 12px; font-size: 13px; font-style: normal; color: var(--muted); }
+
+/* ── 사진·영상: 폭 네 가지 + 묶음 세 가지 ── */
+.j-fig { margin: 56px 0; }
+.j-fig.is-text { grid-column: text; }
+.j-fig.is-wide { grid-column: wide; }
+.j-fig.is-full { grid-column: full; }
+.j-fig.is-small { grid-column: text; width: min(15rem, 100%); justify-self: center; }
+.j-fig.is-small .j-cap { text-align: center; }
+.j-fig img, .j-fig video {                   /* style.css의 유리 액자를 끄고 사진 그대로 */
+  display: block; width: 100%; height: auto;
+  padding: 0; border: 0; background: none; box-shadow: none;
+  border-radius: 2px;
+}
+.j-fig img[style*="aspect-ratio"] { object-fit: cover; }
+.j-fig.is-full img { border-radius: 0; }
+.j-cap { margin-top: 12px; font-size: 13px; line-height: 1.6; color: var(--muted); }
+.j-fig.is-wide .j-cap, .j-fig.is-full .j-cap { max-width: var(--col); }
+.j-fig.is-full .j-cap { padding-inline: var(--gutter); }
+.j-cap-hint { margin-right: 8px; color: var(--ssuk-deep); }
+
+.j-pair-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+
+.j-slides {                                  /* 인스타그램 캐러셀: 옆으로 넘기는 4:5 낱장 */
+  display: grid; grid-auto-flow: column; grid-auto-columns: min(17rem, 72%);
+  gap: 12px; margin: 0; padding: 0 0 12px; list-style: none;
+  overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+  scrollbar-width: thin; scrollbar-color: var(--line) transparent;
+}
+.j-slides li { scroll-snap-align: start; }
+.j-slides:focus-visible { outline: 2px solid var(--ssuk); outline-offset: 4px; }
+
+.j-frame { position: relative; width: 100%; background: var(--ssuk-wash); border-radius: 2px; overflow: hidden; }
+.j-frame video { position: absolute; inset: 0; height: 100%; object-fit: contain; background: #1e221d; }
+.j-video.is-vertical { width: min(21rem, 100%); justify-self: center; }
+@media (min-width: 900px) {                  /* 세로 영상 옆에 캡션을 세워 본문 흐름 안에 둠 */
+  .j-video.is-aside { grid-column: wide; width: auto; justify-self: stretch; display: grid; grid-template-columns: var(--side) 21rem 1fr; gap: 0; align-items: end; }
+  .j-video.is-aside .j-frame { grid-column: 2; }
+  .j-video.is-aside .j-cap { grid-column: 3; margin: 0 0 0 32px; max-width: 16rem; }   /* 영상 왼쪽 끝은 본문 칼럼에 맞춤 */
+}
+
+/* ── C. 끝: 링크·크레딧 → 이전/다음 → 목차 ── */
+.j-foot { margin-top: 112px; padding-top: 28px; border-top: 1px solid var(--line); }
+.j-credits { display: grid; grid-template-columns: repeat(auto-fit, minmax(12em, 1fr)); gap: 18px 24px; margin: 0 0 56px; font-size: 14px; line-height: 1.6; }
+.j-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.j-nav a { display: grid; gap: 6px; align-content: start; }
+.j-nav-next { text-align: right; }
+.j-nav-dir { font-size: 13px; color: var(--muted); }
+.j-nav-title { font-size: clamp(18px, 2.2vw, 22px); line-height: 1.4; }
+.j-nav-why { font-size: 14px; line-height: 1.6; color: var(--ssuk-deep); }
+.j-back { margin: 48px 0 0; font-size: 14px; }
+.journal + .site-footer { margin-top: 64px; }
+
+@media (max-width: 560px) {
+  .journal { font-size: 16px; }
+  .j-pair-row { gap: 8px; }                /* 모바일에서도 나란히: 세로 사진 두 장이 위아래로 길게 쌓이지 않게 */
+  .j-nav { grid-template-columns: 1fr; }
+  .j-nav-next { text-align: left; }
+  .j-fig { margin: 40px 0; }
+  .j-sec { margin-top: 72px; }
+}
