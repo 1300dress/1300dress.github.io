@@ -207,12 +207,6 @@
       "caption": "02 Scent · 후각"
     },
     {
-      "type": "image",
-      "src": "assets/media/04/shop-photo.jpg",
-      "alt": "Scent 챕터 취재 사진",
-      "width": "wide"
-    },
-    {
       "type": "carousel",
       "size": "spread",
       "zoom": true,
@@ -600,16 +594,216 @@
     },
     {
       "type": "p",
-      "text": "스티커·엽서·포스터·문진 후원 리워드도 기획했다.",
-      "dummy": false
+      "text": "잡지를 만드는 동안 인스타그램 계정 <a href=\"https://www.instagram.com/sense.in.dang/\">@sense.in.dang</a>(센스인당)을 운영했다. 잡지에 소개될 가게들을 미리 티징하고, 텀블벅 펀딩을 안내하는 주요 소통 채널로 썼다."
     },
     {
-      "type": "image",
-      "src": "assets/dummy/img-3x2-3.svg",
-      "alt": "임시 이미지",
+      "type": "grid",
       "width": "wide",
-      "caption": "임시 이미지 · 후원 리워드 사진이 들어갈 자리",
-      "dummy": true
+      "cols": 6,
+      "mcols": 3,
+      "caption": "@sense.in.dang 피드 30개 (최신순)",
+      "items": [
+        {
+          "src": "assets/media/04/instagram/post-00.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-01.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-02.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-03.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-04.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-05.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-06.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-07.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-08.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-09.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-10.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-11.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-12.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-13.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-14.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-15.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-16.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-17.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-18.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-19.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-20.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-21.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-22.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-23.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-24.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-25.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-26.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-27.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-28.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/04/instagram/post-29.jpg",
+          "alt": "센스인당 인스타그램 게시물",
+          "ratio": "4:5"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "피드는 장소 15곳의 소개 게시물과 릴스 〈신신당부〉 세 편으로 시작해, 텀블벅 오픈 공지, 펀딩 100%와 팔로워 100명 달성을 기념한 신당동 3행시 이벤트, 챕터별 미리보기 다섯 편, 마감 D-Day 공지로 이어진다."
+    },
+    {
+      "type": "carousel",
+      "caption": "고정 게시물 · 펀딩 리워드 구성",
+      "items": [
+        {
+          "src": "assets/media/04/instagram/reward-1.jpg",
+          "alt": "펀딩 리워드 안내 1장",
+          "ratio": "1:1"
+        },
+        {
+          "src": "assets/media/04/instagram/reward-2.jpg",
+          "alt": "펀딩 리워드 안내 2장",
+          "ratio": "1:1"
+        },
+        {
+          "src": "assets/media/04/instagram/reward-3.jpg",
+          "alt": "펀딩 리워드 안내 3장",
+          "ratio": "1:1"
+        },
+        {
+          "src": "assets/media/04/instagram/reward-4.jpg",
+          "alt": "펀딩 리워드 안내 4장",
+          "ratio": "1:1"
+        },
+        {
+          "src": "assets/media/04/instagram/reward-5.jpg",
+          "alt": "펀딩 리워드 안내 5장",
+          "ratio": "1:1"
+        },
+        {
+          "src": "assets/media/04/instagram/reward-6.jpg",
+          "alt": "펀딩 리워드 안내 6장",
+          "ratio": "1:1"
+        },
+        {
+          "src": "assets/media/04/instagram/reward-7.jpg",
+          "alt": "펀딩 리워드 안내 7장",
+          "ratio": "1:1"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "스티커·엽서·포스터·문진 후원 리워드도 기획했다.",
+      "dummy": false
     },
     {
       "type": "section",
@@ -640,6 +834,11 @@
       "label": "펀딩",
       "value": "텀블벅 프로젝트",
       "href": "https://tumblbug.com/senseindang/story"
+    },
+    {
+      "label": "인스타그램",
+      "value": "@sense.in.dang",
+      "href": "https://www.instagram.com/sense.in.dang/"
     },
     {
       "label": "참여",
