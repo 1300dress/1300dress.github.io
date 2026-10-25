@@ -193,7 +193,8 @@ def page(p, prev, nxt):
               ) if any(b.get("loop") or any(i.get("loop") for i in b.get("items", [])) for b in p["body"]) else ""
     pick = ('  <script src="../assets/pick.js"></script>\n'
             if any(i.get("pick") for b in p["body"] for i in b.get("items", [])) else "")
-    dek = f'    <p class="j-dek">{p["dek"]}</p>\n' if p.get("dek") else ""
+    deks = p["dek"] if isinstance(p.get("dek"), list) else [p["dek"]] if p.get("dek") else []   # 도입문은 한 문단 또는 여러 문단
+    dek = "".join(f'    <p class="j-dek">{t}</p>\n' for t in deks)
     body = "\n\n".join(block(b) for b in p["body"])
     return (HEAD.format(title=esc(p["title"]), why=esc(p["why"]), num=p["num"]) + f"""
   <article class="journal">
