@@ -36,6 +36,14 @@ def video(b):
             f'<source src="{esc(src)}" type="{esc(b.get("mime", "video/mp4"))}">'
             f'</video></div>')
 
+def vimeo(b):
+    # Vimeo 공식 플레이어: 원본 비율 그대로, 재생 기록 추적은 끔(dnt)
+    ratio = b.get("ratio", "16:9")
+    src = f'https://player.vimeo.com/video/{b["vimeo"]}?title=0&byline=0&portrait=0&dnt=1'
+    return (f'<div class="j-frame" style="aspect-ratio: {ratio.replace(":", " / ")}">'
+            f'<iframe src="{esc(src)}" title="{esc(b.get("title", ""))}" loading="lazy" '
+            f'allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>')
+
 def grid_item(i):
     media = video(i) if i["src"].endswith(".mp4") else img(i)
     cap = f'<span class="j-grid-cap">{i["caption"]}</span>' if i.get("caption") else ""
@@ -77,6 +85,15 @@ def block(b):
         size = " is-spread" if spread else ""
         return (f'  <figure class="j-fig j-carousel is-wide{dummy}">\n    <ol class="j-slides{size}" tabindex="0" aria-label="캐러셀 {n}{unit}">\n      {slides}\n    </ol>'
                 f'{caption(hint + (b.get("caption") or ""))}\n  </figure>')
+    if t == "facts":                             # 챕터 머리의 작은 정보 표(브랜드 · 형식 · 맡은 일)
+        return '  <dl class="j-meta j-facts">\n' + meta_rows(b["items"]) + '\n  </dl>'
+    if t == "video" and b.get("vimeo"):
+        ratio = b.get("ratio", "16:9")
+        shape = "is-vertical" if ratio in ("9:16", "4:5", "3:4") else "is-landscape"
+        layout = " is-aside" if b.get("layout") == "aside" else ""
+        width = b.get("width", "text" if shape == "is-vertical" else "wide")
+        return (f'  <figure class="j-fig j-video {shape} is-{width}{layout}{dummy}">\n    {vimeo(b)}'
+                f'{caption(b.get("caption"))}\n  </figure>')
     if t == "video":
         ratio = b.get("ratio", "16:9")
         shape = "is-vertical" if ratio in ("9:16", "4:5", "3:4") else "is-landscape"
