@@ -72,7 +72,7 @@ body = "\n\n".join(
 </head>
 <body>
   <header class="site-header">
-    <a class="name logo" href="index.html" aria-label="subin teahouse — 조수빈, 홈으로"><img class="logo-mark" src="assets/img/name.png" alt="" width="539" height="101"></a>
+    <a class="name logo" href="index.html?welcome" aria-label="subin teahouse — 조수빈, 홈으로"><img class="logo-mark" src="assets/img/name.png" alt="" width="539" height="101"></a>
     <nav class="site-nav">
       <a href="about.html">About</a>
       <a href="letter.html" aria-current="page">Letter</a>

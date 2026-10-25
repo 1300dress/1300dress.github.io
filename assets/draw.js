@@ -24,6 +24,11 @@
   try { seenCover = sessionStorage.getItem("teahouse-poured") === "1"; } catch (e) {}
   const nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
   if (nav && nav.type === "reload") seenCover = false;
+  // 왼쪽 위 손글씨 로고(index.html?welcome)로 들어오면 언제든 다관이 있는 커버부터. 주소는 깔끔하게 되돌림
+  if (new URLSearchParams(location.search).has("welcome")) {
+    seenCover = false;
+    try { history.replaceState(null, "", location.pathname); } catch (e) {}
+  }
 
   function setSlosh() {
     // 찰랑이는 방향과 세기를 매번 무작위로
