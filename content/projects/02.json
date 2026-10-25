@@ -48,33 +48,72 @@
       "width": "wide",
       "cols": 1,
       "mcols": 1,
-      "caption": "〈문장 뽑기〉 릴스 4편 · 문장이 슬롯처럼 돌아가다 멈추는 장면 (소리 없이 반복 재생)",
+      "caption": "〈10월 행운의 문장 뽑기〉 · 2025.10.02 발행 · 소리 없이 반복 재생",
       "items": [
         {
           "src": "assets/media/02/reel-2510.mp4",
           "ratio": "1278:272",
-          "loop": true,
-          "caption": "25년 10월 · 〈10월의 문장 뽑기〉"
-        },
+          "loop": true
+        }
+      ],
+      "link": {
+        "href": "https://www.instagram.com/reel/DPSufgEE4Wt/",
+        "label": "인스타그램에서 원문 보기"
+      }
+    },
+    {
+      "type": "grid",
+      "width": "wide",
+      "cols": 1,
+      "mcols": 1,
+      "caption": "〈12월 행운의 문장 뽑기〉 · 2025.12.09 발행 · 소리 없이 반복 재생",
+      "items": [
         {
           "src": "assets/media/02/reel-2512.mp4",
           "ratio": "1276:272",
-          "loop": true,
-          "caption": "25년 12월 · 〈12월 행운의 문장 뽑기〉"
-        },
+          "loop": true
+        }
+      ],
+      "link": {
+        "href": "https://www.instagram.com/reel/DSB1uUdkwzx/",
+        "label": "인스타그램에서 원문 보기"
+      }
+    },
+    {
+      "type": "grid",
+      "width": "wide",
+      "cols": 1,
+      "mcols": 1,
+      "caption": "〈7월 행운의 문장 뽑기〉 · 2026.07.01 발행 · 소리 없이 반복 재생",
+      "items": [
         {
           "src": "assets/media/02/reel-2607.mp4",
           "ratio": "1276:272",
-          "loop": true,
-          "caption": "26년 7월"
-        },
+          "loop": true
+        }
+      ],
+      "link": {
+        "href": "https://www.instagram.com/reel/DaO87cczFOa/",
+        "label": "인스타그램에서 원문 보기"
+      }
+    },
+    {
+      "type": "grid",
+      "width": "wide",
+      "cols": 1,
+      "mcols": 1,
+      "caption": "〈10월 행운의 문장 뽑기〉 · 2026.10.01 발행 · 소리 없이 반복 재생",
+      "items": [
         {
           "src": "assets/media/02/reel-2610.mp4",
           "ratio": "1080:228",
-          "loop": true,
-          "caption": "26년 10월"
+          "loop": true
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/reel/Dd8rVXTzADS/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -85,153 +124,198 @@
       "width": "wide",
       "cols": 2,
       "mcols": 1,
-      "caption": "달마다 고른 문장 카드 24장 · 26년 5월부터 연말까지",
+      "caption": "〈12월 행운의 문장 뽑기〉 · 2025.12.09 발행 · 문장 카드 4장",
       "items": [
-        {
-          "src": "assets/media/02/pages/01.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 5월"
-        },
-        {
-          "src": "assets/media/02/pages/02.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 5월"
-        },
-        {
-          "src": "assets/media/02/pages/03.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 5월"
-        },
-        {
-          "src": "assets/media/02/pages/04.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 5월"
-        },
-        {
-          "src": "assets/media/02/pages/05.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 7월"
-        },
-        {
-          "src": "assets/media/02/pages/06.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 7월"
-        },
-        {
-          "src": "assets/media/02/pages/07.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 7월"
-        },
-        {
-          "src": "assets/media/02/pages/08.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 7월"
-        },
-        {
-          "src": "assets/media/02/pages/09.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 8월"
-        },
-        {
-          "src": "assets/media/02/pages/10.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 8월"
-        },
-        {
-          "src": "assets/media/02/pages/11.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 8월"
-        },
-        {
-          "src": "assets/media/02/pages/12.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 8월"
-        },
-        {
-          "src": "assets/media/02/pages/13.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 9월"
-        },
-        {
-          "src": "assets/media/02/pages/14.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 9월"
-        },
-        {
-          "src": "assets/media/02/pages/15.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 9월"
-        },
-        {
-          "src": "assets/media/02/pages/16.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 9월"
-        },
-        {
-          "src": "assets/media/02/pages/17.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 10월"
-        },
-        {
-          "src": "assets/media/02/pages/18.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 10월"
-        },
-        {
-          "src": "assets/media/02/pages/19.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 10월"
-        },
-        {
-          "src": "assets/media/02/pages/20.jpg",
-          "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "26년 10월"
-        },
         {
           "src": "assets/media/02/pages/21.jpg",
           "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "연말"
+          "ratio": "128:27"
         },
         {
           "src": "assets/media/02/pages/22.jpg",
           "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "연말"
+          "ratio": "128:27"
         },
         {
           "src": "assets/media/02/pages/23.jpg",
           "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "연말"
+          "ratio": "128:27"
         },
         {
           "src": "assets/media/02/pages/24.jpg",
           "alt": "문장 뽑기 문장 카드",
-          "ratio": "128:27",
-          "caption": "연말"
+          "ratio": "128:27"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/reel/DSB1uUdkwzx/",
+        "label": "인스타그램에서 원문 보기"
+      }
+    },
+    {
+      "type": "grid",
+      "width": "wide",
+      "cols": 2,
+      "mcols": 1,
+      "caption": "〈5월 행운의 문장 뽑기〉 · 2026.05.01 발행 · 문장 카드 4장",
+      "items": [
+        {
+          "src": "assets/media/02/pages/01.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/02.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/03.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/04.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        }
+      ],
+      "link": {
+        "href": "https://www.instagram.com/reel/DXyXU9SzpiF/",
+        "label": "인스타그램에서 원문 보기"
+      }
+    },
+    {
+      "type": "grid",
+      "width": "wide",
+      "cols": 2,
+      "mcols": 1,
+      "caption": "〈7월 행운의 문장 뽑기〉 · 2026.07.01 발행 · 문장 카드 4장",
+      "items": [
+        {
+          "src": "assets/media/02/pages/05.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/06.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/07.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/08.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        }
+      ],
+      "link": {
+        "href": "https://www.instagram.com/reel/DaO87cczFOa/",
+        "label": "인스타그램에서 원문 보기"
+      }
+    },
+    {
+      "type": "grid",
+      "width": "wide",
+      "cols": 2,
+      "mcols": 1,
+      "caption": "〈8월 행운의 문장 뽑기〉 · 2026.08.03 발행 · 문장 카드 4장",
+      "items": [
+        {
+          "src": "assets/media/02/pages/09.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/10.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/11.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/12.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        }
+      ],
+      "link": {
+        "href": "https://www.instagram.com/reel/DbkYj11zaup/",
+        "label": "인스타그램에서 원문 보기"
+      }
+    },
+    {
+      "type": "grid",
+      "width": "wide",
+      "cols": 2,
+      "mcols": 1,
+      "caption": "〈9월 행운의 문장 뽑기〉 · 2026.09.06 발행 · 문장 카드 4장",
+      "items": [
+        {
+          "src": "assets/media/02/pages/13.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/14.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/15.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/16.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        }
+      ],
+      "link": {
+        "href": "https://www.instagram.com/reel/Dc8C2MgTu-z/",
+        "label": "인스타그램에서 원문 보기"
+      }
+    },
+    {
+      "type": "grid",
+      "width": "wide",
+      "cols": 2,
+      "mcols": 1,
+      "caption": "〈10월 행운의 문장 뽑기〉 · 2026.10.01 발행 · 문장 카드 4장",
+      "items": [
+        {
+          "src": "assets/media/02/pages/17.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/18.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/19.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        },
+        {
+          "src": "assets/media/02/pages/20.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27"
+        }
+      ],
+      "link": {
+        "href": "https://www.instagram.com/reel/Dd8rVXTzADS/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "section",
