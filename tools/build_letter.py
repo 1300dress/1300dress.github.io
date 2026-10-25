@@ -1,4 +1,4 @@
-# content/letter.md → letter.html (자기소개서 페이지)
+# content/letter.md → letter.html (자기소개서 페이지). 제목의 " / " 자리에서 줄을 바꿈
 # 프로젝트 상세와 같은 저널 위계: 머리(이름표 → 제목 → 쑥잎색 한 줄) → 항목마다 짧은 선 + 이름표 + 소제목 → 본문
 import html, re, pathlib
 
@@ -84,7 +84,7 @@ body = "\n\n".join(
   <article class="journal">
   <header class="j-head">
     <p class="j-kicker">Cover Letter</p>
-    <h1 class="j-title">{html.escape(title)}</h1>
+    <h1 class="j-title">{"<br>".join(html.escape(t.strip()) for t in title.split(" / "))}</h1>
     <p class="j-why">{html.escape(sub)}</p>
   </header>
 
