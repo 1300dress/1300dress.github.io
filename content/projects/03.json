@@ -1,6 +1,6 @@
 {
   "num": "03",
-  "status": "dummy",
+  "status": "media",
   "category": "Saengmag · Interview / Press",
   "title": "아티스트 인터뷰와 페스티벌 취재",
   "why": "왜 인터뷰는 길고 무거워야 할까?",
@@ -42,11 +42,11 @@
     },
     {
       "type": "image",
-      "src": "assets/dummy/img-21x9-1.svg",
-      "alt": "임시 이미지",
-      "width": "wide",
-      "caption": "임시 이미지 · 〈취중잡담〉 대표 회차가 들어갈 자리",
-      "dummy": true
+      "src": "assets/media/01/thumbs/56.jpg",
+      "alt": "〈김빌리와 취중잡담〉 표지",
+      "ratio": "4:5",
+      "width": "small",
+      "caption": "롱폼 인터뷰 〈김빌리와 취중잡담〉 표지"
     },
     {
       "type": "section",
@@ -60,44 +60,107 @@
     },
     {
       "type": "carousel",
-      "caption": "임시 이미지 · 〈9문9답〉 한 회차의 아홉 장이 들어갈 자리",
-      "dummy": true,
+      "caption": "〈9문9답〉 김뜻돌",
       "items": [
         {
-          "src": "assets/dummy/img-4x5-1.svg",
-          "alt": "임시 캐러셀 1장"
+          "src": "assets/media/03/kimddeutdol/01.jpg",
+          "alt": "9문9답〉 김뜻돌 1장",
+          "ratio": "4:5"
         },
         {
-          "src": "assets/dummy/img-4x5-2.svg",
-          "alt": "임시 캐러셀 2장"
+          "src": "assets/media/03/kimddeutdol/02.jpg",
+          "alt": "9문9답〉 김뜻돌 2장",
+          "ratio": "4:5"
         },
         {
-          "src": "assets/dummy/img-4x5-3.svg",
-          "alt": "임시 캐러셀 3장"
+          "src": "assets/media/03/kimddeutdol/03.jpg",
+          "alt": "9문9답〉 김뜻돌 3장",
+          "ratio": "4:5"
         },
         {
-          "src": "assets/dummy/img-4x5-1.svg",
-          "alt": "임시 캐러셀 4장"
+          "src": "assets/media/03/kimddeutdol/04.jpg",
+          "alt": "9문9답〉 김뜻돌 4장",
+          "ratio": "4:5"
         },
         {
-          "src": "assets/dummy/img-4x5-2.svg",
-          "alt": "임시 캐러셀 5장"
+          "src": "assets/media/03/kimddeutdol/05.jpg",
+          "alt": "9문9답〉 김뜻돌 5장",
+          "ratio": "4:5"
         },
         {
-          "src": "assets/dummy/img-4x5-3.svg",
-          "alt": "임시 캐러셀 6장"
+          "src": "assets/media/03/kimddeutdol/06.jpg",
+          "alt": "9문9답〉 김뜻돌 6장",
+          "ratio": "4:5"
         },
         {
-          "src": "assets/dummy/img-4x5-1.svg",
-          "alt": "임시 캐러셀 7장"
+          "src": "assets/media/03/kimddeutdol/07.jpg",
+          "alt": "9문9답〉 김뜻돌 7장",
+          "ratio": "4:5"
         },
         {
-          "src": "assets/dummy/img-4x5-2.svg",
-          "alt": "임시 캐러셀 8장"
+          "src": "assets/media/03/kimddeutdol/08.jpg",
+          "alt": "9문9답〉 김뜻돌 8장",
+          "ratio": "4:5"
         },
         {
-          "src": "assets/dummy/img-4x5-3.svg",
-          "alt": "임시 캐러셀 9장"
+          "src": "assets/media/03/kimddeutdol/09.jpg",
+          "alt": "9문9답〉 김뜻돌 9장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/10.jpg",
+          "alt": "9문9답〉 김뜻돌 10장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/11.jpg",
+          "alt": "9문9답〉 김뜻돌 11장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/12.jpg",
+          "alt": "9문9답〉 김뜻돌 12장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/13.jpg",
+          "alt": "9문9답〉 김뜻돌 13장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/14.jpg",
+          "alt": "9문9답〉 김뜻돌 14장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/15.jpg",
+          "alt": "9문9답〉 김뜻돌 15장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/16.jpg",
+          "alt": "9문9답〉 김뜻돌 16장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/17.jpg",
+          "alt": "9문9답〉 김뜻돌 17장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/18.jpg",
+          "alt": "9문9답〉 김뜻돌 18장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/19.jpg",
+          "alt": "9문9답〉 김뜻돌 19장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimddeutdol/20.jpg",
+          "alt": "9문9답〉 김뜻돌 20장",
+          "ratio": "4:5"
         }
       ]
     },
@@ -107,13 +170,181 @@
       "dummy": true
     },
     {
-      "type": "video",
-      "src": "assets/dummy/dummy-9x16.mp4",
-      "poster": "assets/dummy/poster-9x16.svg",
-      "ratio": "9:16",
-      "caption": "임시 영상 · 숏폼 인터뷰 영상이 들어갈 자리. 9:16 원본 비율 유지.",
-      "dummy": true,
-      "layout": "aside"
+      "type": "carousel",
+      "caption": "〈9문9답〉 김사월",
+      "items": [
+        {
+          "src": "assets/media/03/kimsawol/01.jpg",
+          "alt": "9문9답〉 김사월 1장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/02.jpg",
+          "alt": "9문9답〉 김사월 2장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/03.jpg",
+          "alt": "9문9답〉 김사월 3장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/04.jpg",
+          "alt": "9문9답〉 김사월 4장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/05.jpg",
+          "alt": "9문9답〉 김사월 5장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/06.jpg",
+          "alt": "9문9답〉 김사월 6장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/07.jpg",
+          "alt": "9문9답〉 김사월 7장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/08.jpg",
+          "alt": "9문9답〉 김사월 8장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/09.jpg",
+          "alt": "9문9답〉 김사월 9장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/10.jpg",
+          "alt": "9문9답〉 김사월 10장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/11.jpg",
+          "alt": "9문9답〉 김사월 11장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/12.jpg",
+          "alt": "9문9답〉 김사월 12장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/13.jpg",
+          "alt": "9문9답〉 김사월 13장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/14.jpg",
+          "alt": "9문9답〉 김사월 14장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/15.jpg",
+          "alt": "9문9답〉 김사월 15장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/16.jpg",
+          "alt": "9문9답〉 김사월 16장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/17.jpg",
+          "alt": "9문9답〉 김사월 17장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/18.jpg",
+          "alt": "9문9답〉 김사월 18장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/19.jpg",
+          "alt": "9문9답〉 김사월 19장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimsawol/20.jpg",
+          "alt": "9문9답〉 김사월 20장",
+          "ratio": "4:5"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "김사월 편: 이 회차에서 질문을 어떻게 바꿨는지, 반응이 어땠는지가 들어갈 자리. (임시 원고)",
+      "dummy": true
+    },
+    {
+      "type": "carousel",
+      "caption": "〈음악은 내 인생〉 김오키",
+      "items": [
+        {
+          "src": "assets/media/03/kimoki/01.jpg",
+          "alt": "음악은 내 인생〉 김오키 1장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimoki/02.jpg",
+          "alt": "음악은 내 인생〉 김오키 2장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimoki/03.jpg",
+          "alt": "음악은 내 인생〉 김오키 3장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimoki/04.jpg",
+          "alt": "음악은 내 인생〉 김오키 4장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimoki/05.jpg",
+          "alt": "음악은 내 인생〉 김오키 5장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimoki/06.jpg",
+          "alt": "음악은 내 인생〉 김오키 6장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimoki/07.jpg",
+          "alt": "음악은 내 인생〉 김오키 7장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimoki/08.jpg",
+          "alt": "음악은 내 인생〉 김오키 8장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimoki/09.jpg",
+          "alt": "음악은 내 인생〉 김오키 9장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimoki/10.jpg",
+          "alt": "음악은 내 인생〉 김오키 10장",
+          "ratio": "4:5"
+        },
+        {
+          "src": "assets/media/03/kimoki/11.jpg",
+          "alt": "음악은 내 인생〉 김오키 11장",
+          "ratio": "4:5"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "〈음악은 내 인생〉: 이 시리즈가 무엇이고 9문9답과 어떻게 다른지가 들어갈 자리. (임시 원고)",
+      "dummy": true
     },
     {
       "type": "p",
@@ -121,12 +352,29 @@
       "dummy": false
     },
     {
-      "type": "video",
-      "src": "assets/dummy/dummy-16x9.mp4",
-      "poster": "assets/dummy/poster-16x9.svg",
-      "ratio": "16:9",
-      "caption": "임시 영상 · 페스티벌 현장 영상이 들어갈 자리. 가로 16:9 원본 비율 유지.",
-      "dummy": true
+      "type": "grid",
+      "width": "wide",
+      "cols": 3,
+      "mcols": 1,
+      "scroll": true,
+      "caption": "페스티벌 프레스 릴스 3편 · 세로 9:16 원본 비율",
+      "items": [
+        {
+          "src": "assets/media/03/press-naamyoung.mp4",
+          "ratio": "9:16",
+          "caption": "랩비트 · 나암영"
+        },
+        {
+          "src": "assets/media/03/press-jaypark.mp4",
+          "ratio": "9:16",
+          "caption": "랩비트 · 박재범"
+        },
+        {
+          "src": "assets/media/03/press-royalpopo.mp4",
+          "ratio": "9:16",
+          "caption": "매들리 · 로얄포포"
+        }
+      ]
     },
     {
       "type": "p",

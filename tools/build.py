@@ -28,10 +28,19 @@ def img(item, cls=""):
 def video(b):
     ratio = b.get("ratio", "16:9")
     poster = f' poster="{esc(media_src(b["poster"]))}"' if b.get("poster") else ""
+    src = media_src(b["src"]) + ("" if b.get("poster") else "#t=0.1")   # 포스터가 없으면 첫 장면을 보여 줌
+    # loop: 소리 없는 짧은 반복 영상(문장뽑기 띠 등)은 컨트롤 없이 자동 재생
+    attrs = "autoplay muted loop playsinline" if b.get("loop") else 'controls playsinline preload="metadata"'
     return (f'<div class="j-frame" style="aspect-ratio: {ratio.replace(":", " / ")}">'
-            f'<video controls playsinline preload="metadata"{poster}>'
-            f'<source src="{esc(media_src(b["src"]))}" type="{esc(b.get("mime", "video/mp4"))}">'
+            f'<video {attrs}{poster}>'
+            f'<source src="{esc(src)}" type="{esc(b.get("mime", "video/mp4"))}">'
             f'</video></div>')
+
+def grid_item(i):
+    media = video(i) if i["src"].endswith(".mp4") else img(i)
+    cap = f'<span class="j-grid-cap">{i["caption"]}</span>' if i.get("caption") else ""
+    return f'<li>{media}{cap}</li>'
+
 
 # 문단·인용의 글은 작성자가 쓴 그대로 넣습니다(<em>, <a>, <br> 정도의 인라인 태그 허용)
 def block(b):
@@ -65,6 +74,12 @@ def block(b):
         layout = " is-aside" if b.get("layout") == "aside" else ""
         width = b.get("width", "text" if shape == "is-vertical" else "wide")
         return (f'  <figure class="j-fig j-video {shape} is-{width}{layout}{dummy}">\n    {video(b)}'
+                f'{caption(b.get("caption"))}\n  </figure>')
+    if t == "grid":                              # 표지 모음·릴스 묶음: cols(넓은 화면) / mcols(모바일) 칸
+        items = "\n      ".join(grid_item(i) for i in b["items"])
+        scroll = " is-scroll" if b.get("scroll") else ""
+        style = f'--cols: {b.get("cols", 3)}; --mcols: {b.get("mcols", 2)}'
+        return (f'  <figure class="j-fig j-grid is-{b.get("width", "wide")}{dummy}">\n    <ul class="j-grid-list{scroll}" style="{style}">\n      {items}\n    </ul>'
                 f'{caption(b.get("caption"))}\n  </figure>')
     if t == "break":
         return '  <hr class="j-break">'
@@ -127,6 +142,12 @@ HEAD = """<!doctype html>
 def page(p, prev, nxt):
     notice = ('    <p class="j-notice">임시 시안 · 이 페이지의 글·이미지·영상은 레이아웃 확인용 더미입니다. '
               '실제 원고와 결과물로 바뀔 예정입니다.</p>\n') if p.get("status") == "dummy" else ""
+    if p.get("status") == "media":
+        notice = '    <p class="j-notice">작업 중 · 이미지와 영상은 실제 결과물이고, 글은 아직 임시 원고입니다.</p>\n'
+    # 자동 반복 영상은 '동작 줄이기' 설정을 켠 사람에게는 멈춘 채 컨트롤을 보여 줌
+    motion = ('  <script>if(matchMedia("(prefers-reduced-motion: reduce)").matches)'
+              'document.querySelectorAll("video[autoplay]").forEach(v=>{v.pause();v.controls=true;});</script>\n'
+              ) if any(b.get("loop") or any(i.get("loop") for i in b.get("items", [])) for b in p["body"]) else ""
     dek = f'    <p class="j-dek">{p["dek"]}</p>\n' if p.get("dek") else ""
     body = "\n\n".join(block(b) for b in p["body"])
     return (HEAD.format(title=esc(p["title"]), why=esc(p["why"]), num=p["num"]) + f"""
@@ -153,7 +174,7 @@ def page(p, prev, nxt):
 
   <footer class="site-footer">© 조수빈 · 한 잔이 나가기 전, 마지막을 살핍니다.</footer>
   <script src="../assets/ko-wrap.js"></script>
-</body>
+{motion}</body>
 </html>
 """)
 

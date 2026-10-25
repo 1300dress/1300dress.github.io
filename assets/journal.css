@@ -94,8 +94,16 @@
 .j-slides li { scroll-snap-align: start; }
 .j-slides:focus-visible { outline: 2px solid var(--ssuk); outline-offset: 4px; }
 
+.j-grid-list {                               /* 표지 모음·문장뽑기 띠·릴스 묶음: 칸 수는 블록마다 --cols / --mcols */
+  display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+  gap: 10px; align-items: start; margin: 0; padding: 0; list-style: none;
+}
+.j-grid-list img { border-radius: 1px; }
+.j-grid-cap { display: block; margin-top: 6px; font-size: 12px; line-height: 1.5; color: var(--muted); }
+
 .j-frame { position: relative; width: 100%; background: var(--ssuk-wash); border-radius: 2px; overflow: hidden; }
 .j-frame video { position: absolute; inset: 0; height: 100%; object-fit: contain; background: #1e221d; }
+.j-frame video[loop] { object-fit: cover; background: none; }   /* 반복 띠 영상: 원본 가장자리의 1px 여백이 검은 줄로 보이지 않게 */
 .j-video.is-vertical { width: min(21rem, 100%); justify-self: center; }
 @media (min-width: 900px) {                  /* 세로 영상 옆에 캡션을 세워 본문 흐름 안에 둠 */
   .j-video.is-aside { grid-column: wide; width: auto; justify-self: stretch; display: grid; grid-template-columns: var(--side) 21rem 1fr; gap: 0; align-items: end; }
@@ -118,6 +126,12 @@
 @media (max-width: 560px) {
   .journal { font-size: 16px; }
   .j-pair-row { gap: 8px; }                /* 모바일에서도 나란히: 세로 사진 두 장이 위아래로 길게 쌓이지 않게 */
+  .j-grid-list { grid-template-columns: repeat(var(--mcols, 2), minmax(0, 1fr)); gap: 6px; }
+  .j-grid-list.is-scroll {                 /* 세로 영상 여러 편은 모바일에서 옆으로 넘기기 */
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 72%;
+    gap: 12px; padding-bottom: 12px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+  }
+  .j-grid-list.is-scroll > li { scroll-snap-align: start; }
   .j-nav { grid-template-columns: 1fr; }
   .j-nav-next { text-align: left; }
   .j-fig { margin: 40px 0; }

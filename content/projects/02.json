@@ -1,6 +1,6 @@
 {
   "num": "02",
-  "status": "dummy",
+  "status": "media",
   "category": "Saengmag · Reels Series",
   "title": "월간 문장뽑기",
   "why": "왜 텍스트는 릴스에서 살아남기 어렵다고 생각할까?",
@@ -42,14 +42,6 @@
       "dummy": true
     },
     {
-      "type": "image",
-      "src": "assets/dummy/img-16x9-2.svg",
-      "alt": "임시 이미지",
-      "width": "text",
-      "caption": "임시 이미지 · 시리즈 시작 전 릴스 화면이 들어갈 자리",
-      "dummy": true
-    },
-    {
       "type": "section",
       "label": "Solution",
       "title": "문장을 주인공으로 세우는 편집"
@@ -60,13 +52,37 @@
       "dummy": true
     },
     {
-      "type": "video",
-      "src": "assets/dummy/dummy-9x16.mp4",
-      "poster": "assets/dummy/poster-9x16.svg",
-      "ratio": "9:16",
-      "caption": "임시 영상 · 〈월간 문장뽑기〉 대표 회차가 들어갈 자리. 세로 9:16 원본 비율을 유지한다.",
-      "dummy": true,
-      "layout": "aside"
+      "type": "grid",
+      "width": "wide",
+      "cols": 1,
+      "mcols": 1,
+      "caption": "〈문장 뽑기〉 릴스 4편 · 문장이 슬롯처럼 돌아가다 멈추는 장면 (소리 없이 반복 재생)",
+      "items": [
+        {
+          "src": "assets/media/02/reel-2510.mp4",
+          "ratio": "1278:272",
+          "loop": true,
+          "caption": "25년 10월 · 〈10월의 문장 뽑기〉"
+        },
+        {
+          "src": "assets/media/02/reel-2512.mp4",
+          "ratio": "1276:272",
+          "loop": true,
+          "caption": "25년 12월 · 〈12월 행운의 문장 뽑기〉"
+        },
+        {
+          "src": "assets/media/02/reel-2607.mp4",
+          "ratio": "1276:272",
+          "loop": true,
+          "caption": "26년 7월"
+        },
+        {
+          "src": "assets/media/02/reel-2610.mp4",
+          "ratio": "1080:228",
+          "loop": true,
+          "caption": "26년 10월"
+        }
+      ]
     },
     {
       "type": "p",
@@ -74,18 +90,155 @@
       "dummy": true
     },
     {
-      "type": "pair",
-      "width": "text",
-      "caption": "임시 이미지 · 회차별 첫 장면 비교가 들어갈 자리",
-      "dummy": true,
+      "type": "grid",
+      "width": "wide",
+      "cols": 2,
+      "mcols": 1,
+      "caption": "달마다 고른 문장 카드 24장 · 26년 5월부터 연말까지",
       "items": [
         {
-          "src": "assets/dummy/img-9x16-1.svg",
-          "alt": "임시 이미지"
+          "src": "assets/media/02/pages/01.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 5월"
         },
         {
-          "src": "assets/dummy/img-9x16-2.svg",
-          "alt": "임시 이미지"
+          "src": "assets/media/02/pages/02.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 5월"
+        },
+        {
+          "src": "assets/media/02/pages/03.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 5월"
+        },
+        {
+          "src": "assets/media/02/pages/04.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 5월"
+        },
+        {
+          "src": "assets/media/02/pages/05.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 7월"
+        },
+        {
+          "src": "assets/media/02/pages/06.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 7월"
+        },
+        {
+          "src": "assets/media/02/pages/07.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 7월"
+        },
+        {
+          "src": "assets/media/02/pages/08.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 7월"
+        },
+        {
+          "src": "assets/media/02/pages/09.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 8월"
+        },
+        {
+          "src": "assets/media/02/pages/10.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 8월"
+        },
+        {
+          "src": "assets/media/02/pages/11.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 8월"
+        },
+        {
+          "src": "assets/media/02/pages/12.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 8월"
+        },
+        {
+          "src": "assets/media/02/pages/13.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 9월"
+        },
+        {
+          "src": "assets/media/02/pages/14.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 9월"
+        },
+        {
+          "src": "assets/media/02/pages/15.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 9월"
+        },
+        {
+          "src": "assets/media/02/pages/16.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 9월"
+        },
+        {
+          "src": "assets/media/02/pages/17.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 10월"
+        },
+        {
+          "src": "assets/media/02/pages/18.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 10월"
+        },
+        {
+          "src": "assets/media/02/pages/19.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 10월"
+        },
+        {
+          "src": "assets/media/02/pages/20.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "26년 10월"
+        },
+        {
+          "src": "assets/media/02/pages/21.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "연말"
+        },
+        {
+          "src": "assets/media/02/pages/22.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "연말"
+        },
+        {
+          "src": "assets/media/02/pages/23.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "연말"
+        },
+        {
+          "src": "assets/media/02/pages/24.jpg",
+          "alt": "문장 뽑기 문장 카드",
+          "ratio": "128:27",
+          "caption": "연말"
         }
       ]
     },
