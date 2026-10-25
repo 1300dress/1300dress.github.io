@@ -107,6 +107,11 @@ def block(b):
         style = f'--cols: {b.get("cols", 3)}; --mcols: {b.get("mcols", 2)}'
         return (f'  <figure class="j-fig j-grid is-{b.get("width", "wide")}{dummy}">\n    <ul class="j-grid-list{scroll}" style="{style}">\n      {items}\n    </ul>'
                 f'{caption(b.get("caption"))}\n  </figure>')
+    if t == "table":                             # 지표 비교표: head 한 줄 + rows, 첫 칸은 이름
+        head = "".join(f"<th>{h}</th>" for h in b["head"])
+        rows = "\n".join("      <tr>" + "".join((f'<th scope="row">{c}</th>' if i == 0 else f"<td>{c}</td>") for i, c in enumerate(r)) + "</tr>" for r in b["rows"])
+        return (f'  <figure class="j-fig j-table is-{b.get("width", "wide")}">\n    <div class="j-table-scroll"><table>\n      <thead><tr>{head}</tr></thead>\n      <tbody>\n{rows}\n      </tbody>\n    </table></div>'
+                f'{caption(b.get("caption"))}\n  </figure>')
     if t == "break":
         return '  <hr class="j-break">'
     raise ValueError(f"모르는 블록 종류: {t}")

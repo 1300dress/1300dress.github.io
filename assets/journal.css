@@ -103,6 +103,14 @@
 .j-grid-list img { border-radius: 1px; }
 .j-grid-cap { display: block; margin-top: 6px; font-size: 12px; line-height: 1.5; color: var(--muted); }
 
+.j-table-scroll { overflow-x: auto; }   /* 표가 좁은 화면에서는 옆으로 밀림 */
+.j-table table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.j-table th, .j-table td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; vertical-align: top; }
+.j-table thead th { font-size: 12px; font-weight: 400; color: var(--muted); }
+.j-table th:first-child, .j-table td:last-child { text-align: left; }
+.j-table td:last-child { white-space: normal; min-width: 14em; color: var(--ssuk-deep); }
+.j-table tbody th { font-weight: 500; }
+
 .j-frame { position: relative; width: 100%; background: var(--ssuk-wash); border-radius: 2px; overflow: hidden; }
 .j-frame video { position: absolute; inset: 0; height: 100%; object-fit: contain; background: #1e221d; }
 .j-frame video[loop] { object-fit: cover; background: none; }   /* 반복 띠 영상: 원본 가장자리의 1px 여백이 검은 줄로 보이지 않게 */
