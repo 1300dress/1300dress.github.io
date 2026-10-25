@@ -175,3 +175,10 @@
 .j-pick-btn::before { content: "❚❚"; font-size: 9px; letter-spacing: -1px; }
 .j-pick-btn[aria-pressed="true"]::before { content: "▶"; font-size: 10px; letter-spacing: 0; }
 .j-pick-btn:focus-visible { outline: 2px solid var(--ssuk); outline-offset: 3px; }
+
+/* 챕터 안 소제목 두 단계: 갈래(h3) → Situation · Solution · Result(h4). 섹션(h2)보다 작고 본문보다 또렷하게 */
+.j-h3 { margin: 72px 0 24px; font-size: inherit; line-height: 1.4; }
+.j-h3-label { display: block; font-family: "Junicode", serif; font-stretch: 75%; font-size: 14px; letter-spacing: 0.06em; color: var(--ssuk-deep); }
+.j-h3-title { display: block; margin-top: 6px; font-size: clamp(19px, 2.2vw, 22px); font-weight: 500; }
+.j-sub { margin: 40px 0 12px; font-size: 16px; font-weight: 600; line-height: 1.5; }
+.j-sub-label { margin-right: 10px; font-family: "Junicode", serif; font-stretch: 75%; font-size: 13px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ssuk-deep); }

@@ -70,6 +70,12 @@ def block(b):
         title = f'<span class="j-sec-title">{b["title"]}</span>' if b.get("title") else ""
         return (f'  <h2 class="j-sec" id="{esc(b["label"].lower())}">'
                 f'<span class="j-sec-label">{esc(b["label"])}</span>{title}</h2>')
+    if t == "h3":                                # 챕터 안의 갈래(삼양의 탱글·불닭·가이드처럼)
+        return (f'  <h3 class="j-h3"><span class="j-h3-label">{esc(b["label"])}</span>'
+                f'<span class="j-h3-title">{b["title"]}</span></h3>')
+    if t == "sub":                               # 챕터 안의 Situation · Solution · Result 소제목
+        return (f'  <h4 class="j-sub"><span class="j-sub-label">{esc(b["label"])}</span>'
+                f'<span class="j-sub-title">{b["title"]}</span></h4>')
     if t == "p":
         return f'  <p class="j-p{dummy}">{b["text"]}</p>'
     if t == "quote":
