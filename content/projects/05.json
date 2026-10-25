@@ -349,11 +349,11 @@
     {
       "type": "sub",
       "label": "Solution",
-      "title": "Sweet Meets Spicy"
+      "title": "Spicy Meets Sweet"
     },
     {
       "type": "p",
-      "text": "<strong>〈Sweet Meets Spicy〉</strong>라는 캠페인 테마를 바탕으로 6편의 숏폼 브랜드 필름에 등장하는 캐릭터 페르소나와 비주얼을 개발했습니다."
+      "text": "<strong>〈Spicy Meets Sweet〉</strong>라는 캠페인 테마를 바탕으로 6편의 숏폼 브랜드 필름에 등장하는 캐릭터 페르소나와 비주얼을 개발했습니다."
     },
     {
       "type": "p",
@@ -365,7 +365,7 @@
       "ratio": "9:16",
       "layout": "aside",
       "title": "Buldak | Spicy Meets Sweet (Gangster)",
-      "caption": "Buldak Swicy 브랜드 필름 · Gangster 편 · 12초"
+      "caption": "Buldak Swicy · 〈Spicy Meets Sweet〉 브랜드 필름 · Gangster 편 · 12초"
     },
     {
       "type": "sub",
@@ -410,14 +410,6 @@
     {
       "type": "p",
       "text": "각기 다른 제작 환경에서도 브랜드 고유의 정체성을 일관되게 구현할 수 있도록 시각적·언어적 기준을 구체화했습니다."
-    },
-    {
-      "type": "image",
-      "src": "assets/dummy/img-3x2-2.svg",
-      "alt": "임시 이미지",
-      "width": "wide",
-      "caption": "자료 필요 · 삼양 글로벌 브랜드 가이드의 공개 가능한 페이지가 들어갈 자리",
-      "dummy": true
     },
     {
       "type": "sub",
