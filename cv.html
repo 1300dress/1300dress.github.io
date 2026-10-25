@@ -28,7 +28,10 @@
     .cv-what { grid-column: 2; margin: 0 0 14px; }
     .cv-what b { font-weight: 600; }
     .cv-where { font-weight: 600; color: #a8aca6; }
-    .cv-pdf { font-size: 13px; color: var(--muted); }
+    /* 맨 아래 PDF 내려받기: 쑥잎색으로 채운 버튼 하나 */
+    .cv-download { margin: 72px 0 0; text-align: center; }
+    .cv-pdf { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--paper); background: var(--ssuk-deep); text-decoration: none; }
+    .cv-pdf:hover, .cv-pdf:focus-visible { background: var(--ink); color: var(--paper); }
     /* 누르면 원문으로 가는 제목: 누르기 전에도 쑥잎색 밑줄과 작은 화살표로 링크임을 드러냄 */
     .cv-link { color: inherit; text-decoration: underline; text-decoration-color: var(--ssuk); text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
     .cv-link::after { content: "↗"; margin-left: 3px; font-weight: 400; font-size: .85em; color: var(--ssuk-deep); }
@@ -51,7 +54,7 @@
       @page { size: A4; margin: 11mm 15mm 9mm; }
       html, body { background: #fff !important; }
       body { padding: 0; font-size: 8.8pt; }
-      .site-header, .site-footer, .cv-pdf { display: none !important; }
+      .site-header, .site-footer, .cv-download { display: none !important; }
       .cv { max-width: none; padding: 0; font-size: 8.8pt; line-height: 1.32; }
       .cv-top, .cv-grid { grid-template-columns: 34mm 1fr; gap: 0 7mm; }
       .cv-top { margin-bottom: 7mm; }
@@ -94,7 +97,7 @@
       <p class="cv-contact">
         조수빈 &nbsp;2001.06.29.<br>
         e: <a href="mailto:gericault@naver.com">gericault@naver.com</a> &nbsp;p: <a href="tel:+821089186053">010-8918-6053</a><br>
-        w: whtnqls0629-png.github.io/subin-portfolio &nbsp;<a class="cv-pdf" href="assets/subin-jo-cv.pdf">PDF</a>
+        w: whtnqls0629-png.github.io/subin-portfolio
       </p>
     </div>
 
@@ -183,6 +186,8 @@
       <p class="cv-what cv-print"><b>Figma · Photoshop · Illustrator · Premiere Pro · Notion · Slack · MS Office</b><br>
         <b>Claude Code</b>&nbsp; API 연동 및 업무 도구 제작 · <b>Gemini · ChatGPT</b>&nbsp; 리서치, 자료 검증, 서치 자동화, 이미지 생성</p>
     </div>
+
+    <p class="cv-download"><a class="cv-pdf" href="assets/subin-jo-cv.pdf" download>PDF Download <span aria-hidden="true">↓</span></a></p>
   </main>
 
   <footer class="site-footer"><a href="portfolio.html">← Portfolio</a></footer>
