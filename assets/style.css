@@ -131,6 +131,7 @@ h1 {
   max-width: 16em;
 }
 h2 { font-size: 26px; line-height: 1.4; margin: 64px 0 16px; }
+h3 { font-size: 17px; line-height: 1.5; margin: 32px 0 8px; }              /* 섹션 안 사례의 과제·관점·제작… */
 .lede { max-width: 30em; color: var(--muted); margin: 0 0 72px; }
 .caption { font-size: 13px; color: var(--muted); }
 
