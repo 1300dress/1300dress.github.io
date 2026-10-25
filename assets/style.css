@@ -453,6 +453,7 @@ body.landing { padding-bottom: 0; }
 }
 .cover-title { font-size: clamp(26px, 3.4vw, 44px); line-height: 1.3; margin: 0; }
 .cover-sub { margin: 0; font-size: 14px; color: var(--muted); }
+.cover-hint { margin-top: -10px; font-size: 13px; color: var(--ssuk-deep); }   /* 버튼 바로 위 안내: 무엇을 누르면 무엇이 오는지 */
 .pour-btn {
   margin-top: 18px;
   padding: 8px 4px;
