@@ -3,6 +3,10 @@
   "status": "",
   "category": "Saengmag · Interview / Press",
   "title": "아티스트 인터뷰와 페스티벌 취재",
+  "title_lines": [
+    "아티스트 인터뷰와",
+    "페스티벌 취재"
+  ],
   "why": "왜 인터뷰는 길고 무거워야 할까?",
   "dek": "한 사람을 제대로 보여 주려면 긴 지면이 필요하다는 생각이 있습니다. 롱폼 인터뷰 〈취중잡담〉에서 숏폼 인터뷰 〈9문9답〉과 〈음악은 내 인생〉으로, 그리고 페스티벌 프레스 현장으로 이어진 인터뷰 작업을 모았습니다.",
   "meta": [
@@ -39,7 +43,11 @@
       "alt": "〈김빌리와 취중잡담〉 표지",
       "ratio": "4:5",
       "width": "small",
-      "caption": "롱폼 인터뷰 〈김빌리와 취중잡담〉 표지"
+      "caption": "롱폼 인터뷰 〈취중잡담〉 EP.10 김빌리 · 2025.04.18 발행",
+      "link": {
+        "href": "https://www.instagram.com/p/DIleEkDz9BW/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "section",
@@ -52,7 +60,7 @@
     },
     {
       "type": "carousel",
-      "caption": "〈9문9답〉 김뜻돌",
+      "caption": "〈9문9답〉 김뜻돌 · 2025.12.22 발행",
       "items": [
         {
           "src": "assets/media/03/kimddeutdol/01.jpg",
@@ -154,7 +162,11 @@
           "alt": "9문9답〉 김뜻돌 20장",
           "ratio": "4:5"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/p/DSkKB11k_NX/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -162,7 +174,7 @@
     },
     {
       "type": "carousel",
-      "caption": "〈9문9답〉 김사월",
+      "caption": "〈9문9답〉 김사월 · 2026.04.01 발행",
       "items": [
         {
           "src": "assets/media/03/kimsawol/01.jpg",
@@ -264,7 +276,11 @@
           "alt": "9문9답〉 김사월 20장",
           "ratio": "4:5"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/p/DWlpy8PE1Yn/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -272,7 +288,7 @@
     },
     {
       "type": "carousel",
-      "caption": "〈음악은 내 인생〉 김오키",
+      "caption": "〈음악은 내 인생〉 김오키 · 2026.08.08 발행",
       "items": [
         {
           "src": "assets/media/03/kimoki/01.jpg",
@@ -329,7 +345,11 @@
           "alt": "음악은 내 인생〉 김오키 11장",
           "ratio": "4:5"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/p/Dbx0G6oE8X9/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -349,22 +369,34 @@
       "cols": 3,
       "mcols": 1,
       "scroll": true,
-      "caption": "페스티벌 프레스 릴스 3편 · 세로 9:16 원본 비율",
+      "caption": "페스티벌 프레스 릴스 3편",
       "items": [
         {
           "src": "assets/media/03/press-naamyoung.mp4",
           "ratio": "9:16",
-          "caption": "랩비트 · 나암영"
+          "caption": "RAPBEAT 2026 · 나우아임영 · 2026.06.23 발행",
+          "link": {
+            "href": "https://www.instagram.com/reel/DZ6Z9Dlz8rB/",
+            "label": "인스타그램에서 원문 보기"
+          }
         },
         {
           "src": "assets/media/03/press-jaypark.mp4",
           "ratio": "9:16",
-          "caption": "랩비트 · 박재범"
+          "caption": "RAPBEAT 2026 · 박재범 · 2026.06.23 발행",
+          "link": {
+            "href": "https://www.instagram.com/reel/DZ7H40OzTGq/",
+            "label": "인스타그램에서 원문 보기"
+          }
         },
         {
           "src": "assets/media/03/press-royalpopo.mp4",
           "ratio": "9:16",
-          "caption": "매들리 · 로얄포포"
+          "caption": "매들리 메들리 2026 · 로얄44 · 영 블레시 · 2026.09.08 발행",
+          "link": {
+            "href": "https://www.instagram.com/reel/DdBowwFB8da/",
+            "label": "인스타그램에서 원문 보기"
+          }
         }
       ]
     },

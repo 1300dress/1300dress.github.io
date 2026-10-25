@@ -59,7 +59,7 @@ def vimeo(b):
 def grid_item(i):
     media = video(i) if i["src"].endswith(".mp4") else img(i)
     cap = f'<span class="j-grid-cap">{i["caption"]}</span>' if i.get("caption") else ""
-    return f'<li>{media}{cap}</li>'
+    return f'<li>{media}{cap}{link_btn(i)}</li>'
 
 
 # 문단·인용의 글은 작성자가 쓴 그대로 넣습니다(<em>, <a>, <br> 정도의 인라인 태그 허용)
@@ -77,7 +77,7 @@ def block(b):
         return f'  <blockquote class="j-quote{dummy}"><p>{b["text"]}</p>{cite}</blockquote>'
     if t == "image":
         return (f'  <figure class="j-fig is-{b.get("width", "text")}{dummy}">\n    {img(b)}'
-                f'{caption(b.get("caption"))}\n  </figure>')
+                f'{caption(b.get("caption"))}{link_btn(b)}\n  </figure>')
     if t == "pair":
         imgs = "\n    ".join(img(i) for i in b["items"])
         return (f'  <figure class="j-fig j-pair is-{b.get("width", "wide")}{dummy}">\n    <div class="j-pair-row">\n    {imgs}\n    </div>'
@@ -199,7 +199,7 @@ def page(p, prev, nxt):
   <article class="journal">
   <header class="j-head">
 {notice}    <p class="j-kicker"><span class="num">({int(p["num"])})</span> · {esc(p["category"])}</p>
-    <h1 class="j-title">{esc(p["title"])}</h1>
+    <h1 class="j-title">{"<br>".join(esc(t) for t in p.get("title_lines", [p["title"]]))}</h1>
     <p class="j-why">{esc(p["why"])}</p>
 {dek}    <dl class="j-meta">
 {meta_rows(p["meta"])}
