@@ -29,6 +29,14 @@
     .cv-what b { font-weight: 600; }
     .cv-where { font-weight: 600; color: #a8aca6; }
     .cv-pdf { font-size: 13px; color: var(--muted); }
+    /* 누르면 원문으로 가는 제목: 누르기 전에도 쑥잎색 밑줄과 작은 화살표로 링크임을 드러냄 */
+    .cv-link { color: inherit; text-decoration: underline; text-decoration-color: var(--ssuk); text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+    .cv-link::after { content: "↗"; margin-left: 3px; font-weight: 400; font-size: .85em; color: var(--ssuk-deep); }
+    .cv-link:hover, .cv-link:focus-visible { color: var(--ssuk-deep); text-decoration-color: var(--ssuk-deep); }
+    .cv-list { margin: 4px 0 0; padding: 0; list-style: none; }
+    .cv-list li { position: relative; padding-left: 1em; }
+    .cv-list li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
+    .cv-skill { color: var(--muted); }
     .cv-private { display: none; }
     .cv-print { display: none; }
     @media (max-width: 640px) {
@@ -55,6 +63,8 @@
       .cv-org, .cv-org + br { display: none; }
       .cv-cap { display: none; }                 /* 한 장 PDF에서는 인턴 · 활동 캡션 생략 */   /* PDF에서는 '광고대행사' 같은 회색 소속 줄 생략 */
       .cv-what { margin-bottom: 1.3mm; break-inside: avoid; }
+      .cv-link { text-decoration: none; }
+      .cv-link::after { content: none; }
       /* 한 장 이력서: 덜 관련된 활동 · 수상은 PDF에서 빼고, 웹 C/V에만 남김 */
       .cv-extra { display: none !important; }
       .cv-print { display: block; }
@@ -75,7 +85,7 @@
   <main class="cv">
     <!-- 첫 장 타이틀: 이름보다 '어떤 콘텐츠 마케터인지'가 먼저 보이게. 이름·연락처는 작게 한 줄 -->
     <div class="cv-top">
-      <h1 class="cv-title">브랜드가 하고 싶은 말을,<br>고객이 저장하고 싶은 한 장으로.</h1>
+      <h1 class="cv-title">머무르고 싶은 일상을<br>콘텐츠로 제안하는 조수빈입니다.</h1>
       <p class="cv-name">Subin Jo</p>
       <p class="cv-contact">
         조수빈<span class="cv-private" data-fill="birth"></span><br>
@@ -88,34 +98,30 @@
       <h2 class="cv-sec">EXPERIENCE</h2>
 
       <div class="cv-when">2024.09 – 현재</div>
-      <p class="cv-what"><b>생맥 (@saengmag)</b>&nbsp; 에디터<br><span class="cv-where cv-org">인스타그램 웹매거진</span><br>
-        팔로워 6만 인스타그램 웹매거진 운영 · 에세이·인터뷰·브랜디드 콘텐츠 제작·발행<br>
-        페스티벌 취재 및 릴스 제작 · 개인 기획 콘텐츠 좋아요 1.3만 회</p>
+      <div class="cv-what"><b><a class="cv-link" href="https://www.instagram.com/saengmag/" target="_blank" rel="noopener">생맥 (@saengmag)</a></b>&nbsp; 에디터<br><span class="cv-where">인스타그램 기반 웹매거진 · 팔로워 6만</span>
+        <ul class="cv-list"><li>에세이·인터뷰·브랜디드 콘텐츠 기획 및 발행</li><li>페스티벌 취재 및 릴스 제작</li><li>개인 기획 콘텐츠 좋아요 1.3만 회 기록</li></ul></div>
 
       <div class="cv-when">2024.07 – 현재</div>
-      <p class="cv-what"><b>투래빗츠</b>&nbsp; 카피라이터<br><span class="cv-where cv-org">광고대행사</span><br>
-        다이슨 국내 론칭 IMC 운영 · 카피 개발·영상 비주얼 검수·최종 출고(2025–2026)<br>
-        삼양 글로벌 브랜드 가이드 제작 · IGIN 론칭 캠페인 운영</p>
+      <div class="cv-what"><b>투래빗츠</b>&nbsp; 카피라이터<br><span class="cv-where cv-org">광고대행사</span>
+        <ul class="cv-list"><li>다이슨 국내 론칭 캠페인 메인 카피 개발 및 IMC 제작 운영</li><li>네이버 지도·삼양 글로벌 캠페인 기획 및 콘텐츠 제작</li><li>영상·비주얼 검수 및 매체별 최종 소재 출고</li><li>삼양 글로벌 브랜드 가이드 제작</li></ul></div>
 
       <div class="cv-when">2023.07 – 2023.09</div>
-      <p class="cv-what"><b>HS애드</b>&nbsp; 통합솔루션7팀 AE 인턴<span class="cv-cap"><br><span class="cv-where cv-org">광고대행사</span><br>
-        제주항공 · S-OIL 등 3개 광고주 캠페인 운영 · 주간 트렌드 리포트</span></p>
+      <div class="cv-what"><b>HS애드</b>&nbsp; 통합솔루션7팀 AE 인턴<span class="cv-cap"><br><span class="cv-where cv-org">광고대행사</span>
+        <ul class="cv-list"><li>제주항공·S-OIL 등 광고주 캠페인 운영</li><li>주간 트렌드 리포트 작성</li></ul></span></div>
 
       <h2 class="cv-sec">PROJECTS</h2>
 
       <div class="cv-when">2025.10</div>
-      <p class="cv-what"><b>후지필름 일주일기 × 무인양품 콜라보 전시</b>&nbsp; 생맥 참여 작가<br>
-        워크숍 〈생맥이 알려주는 사진편지 쓰는 법〉 기획 · 진행, 전시 참여</p>
+      <div class="cv-what"><b><a class="cv-link" href="https://www.instagram.com/p/DPTKPo6gRPy/" target="_blank" rel="noopener">후지필름 일주일기 × 무인양품</a></b>&nbsp; 콜라보 전시<br><span class="cv-where">생맥 참여 작가</span>
+        <ul class="cv-list"><li>사진편지 워크숍 기획·진행 및 전시 참여</li></ul></div>
 
       <div class="cv-when">2023.11</div>
-      <p class="cv-what"><b>전시 〈당신의 상실〉</b>&nbsp; 기획팀장<br>
-        전시 콘셉트 기획 및 제작 · 청년 번아웃 섹션 〈열정 정비소〉 기획</p>
+      <div class="cv-what"><b><a class="cv-link" href="https://www.instagram.com/dressyourloss/" target="_blank" rel="noopener">전시 〈당신의 상실〉</a></b>&nbsp; '열정' 섹션 기획팀장
+        <ul class="cv-list"><li>전시 콘셉트 및 콘텐츠 기획·제작</li><li>청년 번아웃을 주제로 한 〈열정 정비소〉 섹션 기획</li></ul></div>
 
       <div class="cv-when">2023.01 – 2023.06</div>
-      <p class="cv-what"><b>로컬 브랜드 매거진 〈신감각, 신당동〉</b>&nbsp; 편집장<br>
-        에디터 29명과 로컬 브랜드 24곳 취재 · 텀블벅 펀딩 163% 달성 · 종이잡지클럽 입고</p>
-
-
+      <div class="cv-what"><b><a class="cv-link" href="https://tumblbug.com/senseindang" target="_blank" rel="noopener">로컬 브랜드 매거진 〈신감각, 신당동〉</a></b>&nbsp; 편집장
+        <ul class="cv-list"><li>에디터 29명과 로컬 브랜드 24곳 취재</li><li>텀블벅 펀딩 목표 대비 163% 달성</li><li>종이잡지클럽 입고</li></ul></div>
     </div>
 
     <div class="cv-grid">
@@ -125,28 +131,16 @@
       <p class="cv-what cv-print"><b>대학생 연합광고동아리 애드파워</b>&nbsp; 기획부 36기 · 68대 대외협력팀장</p>
 
       <div class="cv-when cv-extra">2022.12 – 2023.06</div>
-      <p class="cv-what cv-extra"><b>대학생 연합광고동아리 애드파워</b>&nbsp; 68대 운영위원회 대외협력팀장<br>
-        브랜드 협업 · 협찬 커뮤니케이션 총괄</p>
+      <div class="cv-what cv-extra"><b>대학생 연합광고동아리 애드파워 68대 운영위원회</b>&nbsp; 대외협력팀장
+        <ul class="cv-list"><li>브랜드 협업 및 협찬 커뮤니케이션 총괄</li></ul></div>
 
       <div class="cv-when cv-extra">2022.01 – 2023.10</div>
-      <p class="cv-what cv-extra"><b>대학생 연합광고동아리 애드파워</b>&nbsp; 기획부 36기<br>
-        경쟁 PT · 전시 팀장</p>
-
-      <div class="cv-when cv-extra">2021.05 – 2021.11</div>
-      <p class="cv-what cv-extra"><b>서울동행 기획봉사 공작소</b>&nbsp; 200일 프로젝트<br>
-        보호종료아동 '자립케어북' 기획</p>
-
-      <div class="cv-when cv-extra">2021.03 – 2021.12</div>
-      <p class="cv-what cv-extra"><b>서서울생명의전화</b>&nbsp; 대학생 크리에이터<br>
-        홍보물 제작 · 인터뷰 콘텐츠 취재</p>
+      <div class="cv-what cv-extra"><b>대학생 연합광고동아리 애드파워</b>&nbsp; 기획부 36기
+        <ul class="cv-list"><li>경쟁 PT 및 전시 기획팀장</li></ul></div>
 
       <div class="cv-when">2021.02 – 2021.09</div>
-      <p class="cv-what"><b>동국대학교 중앙영화동아리</b>&nbsp; 부회장<span class="cv-cap"><br>
-        단편영화 촬영 총괄</span></p>
-
-      <div class="cv-when cv-extra">2020.12 – 2021.05</div>
-      <p class="cv-what cv-extra"><b>소셜벤처 은근</b>&nbsp; 기획<br>
-        전통시장 펀딩 프로젝트 · 인스타툰 기획</p>
+      <div class="cv-what"><b>동국대학교 중앙영화동아리</b>&nbsp; 부회장<span class="cv-cap">
+        <ul class="cv-list"><li>단편영화 촬영 총괄</li></ul></span></div>
 
       <h2 class="cv-sec">AWARDS</h2>
 
@@ -175,19 +169,15 @@
 
       <h2 class="cv-sec">SKILLS</h2>
 
-      <div class="cv-when"></div>
-      <p class="cv-what cv-print">
-        <b>Figma · Premiere Pro · Notion · Slack</b>&nbsp; 콘텐츠 · 영상 제작, 아카이빙, 협업<br>
-        <b>Claude Code · Gemini · ChatGPT</b>&nbsp; 업무 툴 제작, 자료 검증, 서치 자동화<br>
-        Photoshop · Illustrator · MS Office</p>
-      <p class="cv-what cv-extra">
-        <b>Figma</b>&nbsp; 콘텐츠 제작<br>
-        <b>Premiere Pro</b>&nbsp; 영상 편집<br>
-        <b>Notion</b>&nbsp; 아카이빙 · 업무 관리<br>
-        <b>Slack</b>&nbsp; 협업<br>
-        <b>Claude Code</b>&nbsp; API 연동 업무 툴 제작<br>
-        <b>Gemini · ChatGPT</b>&nbsp; 자료 검증 · 서치 자동화 · 이미지 생성<br>
-        <b>Photoshop · Illustrator · MS Office</b></p>
+      <div class="cv-when cv-skill">Content &amp; Design</div>
+      <p class="cv-what"><b>Figma · Photoshop · Illustrator</b></p>
+      <div class="cv-when cv-skill">Video</div>
+      <p class="cv-what"><b>Premiere Pro</b></p>
+      <div class="cv-when cv-skill">Documentation &amp; Collaboration</div>
+      <p class="cv-what"><b>Notion · Slack · MS Office</b></p>
+      <div class="cv-when cv-skill">AI &amp; Automation</div>
+      <p class="cv-what"><b>Claude Code</b>&nbsp; API 연동 및 업무 도구 제작<br>
+        <b>Gemini · ChatGPT</b>&nbsp; 리서치, 자료 검증, 서치 자동화, 이미지 생성</p>
     </div>
   </main>
 
