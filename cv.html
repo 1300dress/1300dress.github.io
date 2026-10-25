@@ -65,6 +65,10 @@
       .cv-what { margin-bottom: 1.3mm; break-inside: avoid; }
       .cv-link { text-decoration: none; }
       .cv-link::after { content: none; }
+      .cv-title { font-size: 19pt; margin-bottom: 4mm; }
+      .cv-top { margin-bottom: 5mm; }
+      .cv-sec { margin: 5.5mm 0 1.5mm; }
+      .cv-list { margin-top: .3mm; }
       /* 한 장 이력서: 덜 관련된 활동 · 수상은 PDF에서 빼고, 웹 C/V에만 남김 */
       .cv-extra { display: none !important; }
       .cv-print { display: block; }
@@ -169,15 +173,18 @@
 
       <h2 class="cv-sec">SKILLS</h2>
 
-      <div class="cv-when cv-skill">Content &amp; Design</div>
-      <p class="cv-what"><b>Figma · Photoshop · Illustrator</b></p>
-      <div class="cv-when cv-skill">Video</div>
-      <p class="cv-what"><b>Premiere Pro</b></p>
-      <div class="cv-when cv-skill">Documentation &amp; Collaboration</div>
-      <p class="cv-what"><b>Notion · Slack · MS Office</b></p>
-      <div class="cv-when cv-skill">AI &amp; Automation</div>
-      <p class="cv-what"><b>Claude Code</b>&nbsp; API 연동 및 업무 도구 제작<br>
+      <div class="cv-when cv-skill cv-extra">Content &amp; Design</div>
+      <p class="cv-what cv-extra"><b>Figma · Photoshop · Illustrator</b></p>
+      <div class="cv-when cv-skill cv-extra">Video</div>
+      <p class="cv-what cv-extra"><b>Premiere Pro</b></p>
+      <div class="cv-when cv-skill cv-extra">Documentation &amp; Collaboration</div>
+      <p class="cv-what cv-extra"><b>Notion · Slack · MS Office</b></p>
+      <div class="cv-when cv-skill cv-extra">AI &amp; Automation</div>
+      <p class="cv-what cv-extra"><b>Claude Code</b>&nbsp; API 연동 및 업무 도구 제작<br>
         <b>Gemini · ChatGPT</b>&nbsp; 리서치, 자료 검증, 서치 자동화, 이미지 생성</p>
+      <div class="cv-when cv-print"></div>
+      <p class="cv-what cv-print"><b>Figma · Photoshop · Illustrator · Premiere Pro · Notion · Slack · MS Office</b><br>
+        <b>Claude Code</b>&nbsp; API 연동 및 업무 도구 제작 · <b>Gemini · ChatGPT</b>&nbsp; 리서치, 자료 검증, 서치 자동화, 이미지 생성</p>
     </div>
   </main>
 
