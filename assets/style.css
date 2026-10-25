@@ -159,7 +159,11 @@ h3 { font-size: 17px; line-height: 1.5; margin: 32px 0 8px; }              /* �
   max-width: 100%; white-space: nowrap; overflow: hidden;
   opacity: 0; pointer-events: none;
   transition: opacity .2s ease;
+  /* 질문은 작업 노트처럼: 본문 산세리프(프리텐다드) · 타이틀의 78% · 쑥잎색 */
+  font-family: var(--font); font-stretch: 100%; font-size: 78%; font-weight: 500; letter-spacing: -0.01em;
+  color: var(--ssuk-deep);
 }
+.index .t-why .ko { font: inherit; letter-spacing: inherit; display: inline; transform: none; }   /* ko-wrap의 본명조 처리를 풂 */
 .index a:focus-visible .t-name { opacity: 0; transition: opacity .25s ease; }
 .index a:focus-visible .t-why { opacity: 1; transition: opacity .35s ease .15s; }
 @media (hover: hover) {

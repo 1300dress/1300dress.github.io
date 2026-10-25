@@ -47,7 +47,7 @@
       document.querySelectorAll(".index .t-why").forEach(q => {
         q.style.fontSize = "";
         const fit = q.parentElement.clientWidth / q.scrollWidth;
-        if (fit < 1) q.style.fontSize = (fit * 100).toFixed(1) + "%";
+        if (fit < 1) q.style.fontSize = (parseFloat(getComputedStyle(q).fontSize) * fit).toFixed(1) + "px";
       });
     }
     document.fonts.ready.then(fitWhy);
