@@ -149,3 +149,14 @@
   .j-fig { margin: 40px 0; }
   .j-sec { margin-top: 72px; }
 }
+
+/* 원문 바로가기: 캡션(회색 작은 글)과 섞이지 않게 쑥잎색 테두리 버튼으로 */
+.j-link-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 14px; padding: 7px 14px;
+  font-size: 13px; font-weight: 500; line-height: 1.4;
+  color: var(--ssuk-deep); text-decoration: none;
+  border: 1px solid var(--ssuk); border-radius: 999px;
+  transition: background-color .15s, color .15s;
+}
+.j-link-btn:hover, .j-link-btn:focus-visible { background: var(--ssuk-deep); border-color: var(--ssuk-deep); color: var(--paper); }

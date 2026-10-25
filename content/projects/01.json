@@ -90,7 +90,11 @@
           "alt": "별스러운 이유들로 열두 달을 사랑할래 8장",
           "ratio": "1:1"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/p/DEkFe1DJmBs/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -154,7 +158,11 @@
           "alt": "청승도 청춘이다 10장",
           "ratio": "1:1"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/p/DAim8NHTCxS/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -257,7 +265,11 @@
           "alt": "퍼스트 러브 인 삿포로 17장",
           "ratio": "4:5"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/p/DRUVYkvE_5z/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -331,7 +343,11 @@
           "alt": "시시때때로 약해져도 영영 춤을 출 테니 12장",
           "ratio": "4:5"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/p/Dch45Mpkyfg/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -390,7 +406,11 @@
           "alt": "작은 소라고둥 속에도 철썩이는 파도가 있어 9장",
           "ratio": "4:5"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/p/DG5bmMLTqun/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -445,7 +465,11 @@
           "alt": "우리는 우연을 사랑해 9장",
           "ratio": "4:5"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/p/DIJJd6xTs_N/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -505,7 +529,11 @@
           "alt": "어느 지망생에게 10장",
           "ratio": "4:5"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/p/DItMaIdzsOh/",
+        "label": "인스타그램에서 원문 보기"
+      }
     },
     {
       "type": "p",
@@ -525,7 +553,7 @@
       "width": "wide",
       "cols": 8,
       "mcols": 4,
-      "caption": "생맥 오리지널 표지 56장 (파일 이름 순)",
+      "caption": "생맥 오리지널 표지 56장",
       "items": [
         {
           "src": "assets/media/01/thumbs/01.jpg",
@@ -807,7 +835,11 @@
           "alt": "생맥 오리지널 표지",
           "ratio": "4:5"
         }
-      ]
+      ],
+      "link": {
+        "href": "https://www.instagram.com/saengmag/",
+        "label": "@saengmag 인스타그램 가기"
+      }
     },
     {
       "type": "p",

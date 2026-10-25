@@ -20,6 +20,11 @@ def media_src(src):
 def caption(text, cls="j-cap"):
     return f'\n    <figcaption class="{cls}">{text}</figcaption>' if text else ""
 
+def link_btn(b):                             # 캐러셀·격자 아래 원문 바로가기: {"href", "label"}
+    l = b.get("link")
+    return (f'\n    <a class="j-link-btn" href="{esc(l["href"])}" target="_blank" rel="noopener">'
+            f'{l["label"]}<span aria-hidden="true">↗</span></a>') if l else ""
+
 def img(item, cls=""):
     ratio = item.get("ratio", "")
     style = f' style="aspect-ratio: {ratio.replace(":", " / ")}"' if ratio else ""
@@ -84,7 +89,7 @@ def block(b):
         hint = f'<span class="j-cap-hint">{n}{unit} · 옆으로 넘겨 보기{" · 누르면 크게" if b.get("zoom") else ""}</span>'
         size = " is-spread" if spread else ""
         return (f'  <figure class="j-fig j-carousel is-wide{dummy}">\n    <ol class="j-slides{size}" tabindex="0" aria-label="캐러셀 {n}{unit}">\n      {slides}\n    </ol>'
-                f'{caption(hint + (b.get("caption") or ""))}\n  </figure>')
+                f'{caption(hint + (b.get("caption") or ""))}{link_btn(b)}\n  </figure>')
     if t == "facts":                             # 챕터 머리의 작은 정보 표(브랜드 · 형식 · 맡은 일)
         return '  <dl class="j-meta j-facts">\n' + meta_rows(b["items"]) + '\n  </dl>'
     if t == "video" and b.get("vimeo"):
@@ -106,7 +111,7 @@ def block(b):
         scroll = " is-scroll" if b.get("scroll") else ""
         style = f'--cols: {b.get("cols", 3)}; --mcols: {b.get("mcols", 2)}'
         return (f'  <figure class="j-fig j-grid is-{b.get("width", "wide")}{dummy}">\n    <ul class="j-grid-list{scroll}" style="{style}">\n      {items}\n    </ul>'
-                f'{caption(b.get("caption"))}\n  </figure>')
+                f'{caption(b.get("caption"))}{link_btn(b)}\n  </figure>')
     if t == "table":                             # 지표 비교표: head 한 줄 + rows, 첫 칸은 이름
         head = "".join(f"<th>{h}</th>" for h in b["head"])
         rows = "\n".join("      <tr>" + "".join((f'<th scope="row">{c}</th>' if i == 0 else f"<td>{c}</td>") for i, c in enumerate(r)) + "</tr>" for r in b["rows"])
