@@ -161,19 +161,17 @@
 }
 .j-link-btn:hover, .j-link-btn:focus-visible { background: var(--ssuk-deep); border-color: var(--ssuk-deep); color: var(--paper); }
 
-/* 문장뽑기 릴스: 누르면 멈춰서 그 순간의 문장이 뽑힘. 안내 문구는 영상 오른쪽 아래 작은 꼬리표로 */
+/* 버튼 줄: 원문 바로가기 옆에 문장 뽑기 버튼. 안내는 영상 위가 아니라 밖에 두어 영상 속 글씨로 읽히지 않게 */
+.j-btn-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.j-btn-row .j-link-btn { margin-top: 0; }
 .j-frame.is-pick { cursor: pointer; }
-.j-frame.is-pick:focus-visible { outline: 2px solid var(--ssuk); outline-offset: 3px; }
-.j-pick-cta {
-  position: absolute; right: 10px; bottom: 10px;
-  padding: 4px 10px; border-radius: 999px;
-  font-size: 12px; font-weight: 500; line-height: 1.4; white-space: nowrap;
-  color: var(--paper); background: var(--ssuk-deep);
-  pointer-events: none; transition: background-color .15s;
-}
-.j-pick-cta::before { content: "눌러서 행운의 문장 뽑기"; }
-.j-frame.is-picked .j-pick-cta::before { content: "이번 달 행운의 문장 · 다시 누르면 이어서"; }
 .j-frame.is-picked { box-shadow: 0 0 0 2px var(--ssuk-deep); }
-@media (max-width: 560px) {
-  .j-pick-cta { right: 6px; bottom: 6px; padding: 2px 8px; font-size: 11px; }
+.j-pick-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px; border: 1px solid var(--ssuk-deep); border-radius: 999px;
+  font: inherit; font-size: 13px; font-weight: 500; line-height: 1.4;
+  color: var(--paper); background: var(--ssuk-deep); cursor: pointer;
 }
+.j-pick-btn::before { content: "❚❚"; font-size: 9px; letter-spacing: -1px; }
+.j-pick-btn[aria-pressed="true"]::before { content: "▶"; font-size: 10px; letter-spacing: 0; }
+.j-pick-btn:focus-visible { outline: 2px solid var(--ssuk); outline-offset: 3px; }

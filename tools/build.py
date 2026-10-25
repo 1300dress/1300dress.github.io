@@ -20,10 +20,15 @@ def media_src(src):
 def caption(text, cls="j-cap"):
     return f'\n    <figcaption class="{cls}">{text}</figcaption>' if text else ""
 
-def link_btn(b):                             # 캐러셀·격자 아래 원문 바로가기: {"href", "label"}
+def link_btn(b):                             # 캐러셀·격자 아래 버튼 줄: 문장 뽑기(pick 영상) + 원문 바로가기 {"href", "label"}
     l = b.get("link")
-    return (f'\n    <a class="j-link-btn" href="{esc(l["href"])}" target="_blank" rel="noopener">'
-            f'{l["label"]}<span aria-hidden="true">↗</span></a>') if l else ""
+    pick = any(i.get("pick") for i in b.get("items", []))
+    btns = ('<button class="j-pick-btn" type="button" aria-pressed="false">'
+            '<span class="j-pick-label">눌러서 행운의 문장 뽑기</span></button>') if pick else ""
+    if l:
+        btns += (f'<a class="j-link-btn" href="{esc(l["href"])}" target="_blank" rel="noopener">'
+                 f'{l["label"]}<span aria-hidden="true">↗</span></a>')
+    return f'\n    <div class="j-btn-row">{btns}</div>' if btns else ""
 
 def img(item, cls=""):
     ratio = item.get("ratio", "")
@@ -36,13 +41,12 @@ def video(b):
     src = media_src(b["src"]) + ("" if b.get("poster") else "#t=0.1")   # 포스터가 없으면 첫 장면을 보여 줌
     # loop: 소리 없는 짧은 반복 영상(문장뽑기 띠 등)은 컨트롤 없이 자동 재생
     attrs = "autoplay muted loop playsinline" if b.get("loop") else 'controls playsinline preload="metadata"'
-    # pick: 문장뽑기 릴스처럼 누르면 멈춰서 그 순간의 문장이 '뽑히고', 다시 누르면 이어서 돌아감(assets/pick.js)
-    pick = (' is-pick" role="button" tabindex="0" aria-pressed="false" aria-label="눌러서 행운의 문장 뽑기',
-            '<span class="j-pick-cta" aria-hidden="true"></span>') if b.get("pick") else ("", "")
-    return (f'<div class="j-frame{pick[0]}" style="aspect-ratio: {ratio.replace(":", " / ")}">'
+    # pick: 문장뽑기 릴스처럼 누르면 멈춰서 그 순간의 문장이 '뽑힘'(버튼은 영상 밖, link_btn 옆 · assets/pick.js)
+    pick = " is-pick" if b.get("pick") else ""
+    return (f'<div class="j-frame{pick}" style="aspect-ratio: {ratio.replace(":", " / ")}">'
             f'<video {attrs}{poster}>'
             f'<source src="{esc(src)}" type="{esc(b.get("mime", "video/mp4"))}">'
-            f'</video>{pick[1]}</div>')
+            f'</video></div>')
 
 def vimeo(b):
     # Vimeo 공식 플레이어: 원본 비율 그대로, 재생 기록 추적은 끔(dnt)
