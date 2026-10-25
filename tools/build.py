@@ -36,10 +36,13 @@ def video(b):
     src = media_src(b["src"]) + ("" if b.get("poster") else "#t=0.1")   # 포스터가 없으면 첫 장면을 보여 줌
     # loop: 소리 없는 짧은 반복 영상(문장뽑기 띠 등)은 컨트롤 없이 자동 재생
     attrs = "autoplay muted loop playsinline" if b.get("loop") else 'controls playsinline preload="metadata"'
-    return (f'<div class="j-frame" style="aspect-ratio: {ratio.replace(":", " / ")}">'
+    # pick: 문장뽑기 릴스처럼 누르면 멈춰서 그 순간의 문장이 '뽑히고', 다시 누르면 이어서 돌아감(assets/pick.js)
+    pick = (' is-pick" role="button" tabindex="0" aria-pressed="false" aria-label="눌러서 행운의 문장 뽑기',
+            '<span class="j-pick-cta" aria-hidden="true"></span>') if b.get("pick") else ("", "")
+    return (f'<div class="j-frame{pick[0]}" style="aspect-ratio: {ratio.replace(":", " / ")}">'
             f'<video {attrs}{poster}>'
             f'<source src="{esc(src)}" type="{esc(b.get("mime", "video/mp4"))}">'
-            f'</video></div>')
+            f'</video>{pick[1]}</div>')
 
 def vimeo(b):
     # Vimeo 공식 플레이어: 원본 비율 그대로, 재생 기록 추적은 끔(dnt)
@@ -184,6 +187,8 @@ def page(p, prev, nxt):
     motion = ('  <script>if(matchMedia("(prefers-reduced-motion: reduce)").matches)'
               'document.querySelectorAll("video[autoplay]").forEach(v=>{v.pause();v.controls=true;});</script>\n'
               ) if any(b.get("loop") or any(i.get("loop") for i in b.get("items", [])) for b in p["body"]) else ""
+    pick = ('  <script src="../assets/pick.js"></script>\n'
+            if any(i.get("pick") for b in p["body"] for i in b.get("items", [])) else "")
     dek = f'    <p class="j-dek">{p["dek"]}</p>\n' if p.get("dek") else ""
     body = "\n\n".join(block(b) for b in p["body"])
     return (HEAD.format(title=esc(p["title"]), why=esc(p["why"]), num=p["num"]) + f"""
@@ -210,7 +215,7 @@ def page(p, prev, nxt):
 
   <footer class="site-footer">© 조수빈 · 한 잔이 나가기 전, 마지막을 살핍니다.</footer>
   <script src="../assets/ko-wrap.js"></script>
-{motion}</body>
+{motion}{pick}</body>
 </html>
 """)
 

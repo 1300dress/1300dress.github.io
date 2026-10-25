@@ -160,3 +160,20 @@
   transition: background-color .15s, color .15s;
 }
 .j-link-btn:hover, .j-link-btn:focus-visible { background: var(--ssuk-deep); border-color: var(--ssuk-deep); color: var(--paper); }
+
+/* 문장뽑기 릴스: 누르면 멈춰서 그 순간의 문장이 뽑힘. 안내 문구는 영상 오른쪽 아래 작은 꼬리표로 */
+.j-frame.is-pick { cursor: pointer; }
+.j-frame.is-pick:focus-visible { outline: 2px solid var(--ssuk); outline-offset: 3px; }
+.j-pick-cta {
+  position: absolute; right: 10px; bottom: 10px;
+  padding: 4px 10px; border-radius: 999px;
+  font-size: 12px; font-weight: 500; line-height: 1.4; white-space: nowrap;
+  color: var(--paper); background: var(--ssuk-deep);
+  pointer-events: none; transition: background-color .15s;
+}
+.j-pick-cta::before { content: "눌러서 행운의 문장 뽑기"; }
+.j-frame.is-picked .j-pick-cta::before { content: "이번 달 행운의 문장 · 다시 누르면 이어서"; }
+.j-frame.is-picked { box-shadow: 0 0 0 2px var(--ssuk-deep); }
+@media (max-width: 560px) {
+  .j-pick-cta { right: 6px; bottom: 6px; padding: 2px 8px; font-size: 11px; }
+}

@@ -41,19 +41,20 @@
     },
     {
       "type": "p",
-      "text": "〈월간 문장뽑기〉는 달마다 노래 가사, 시, 책, 수상 소감에서 문장을 골라 뽑기처럼 보여 줍니다. 가로로 긴 띠 위에서 문장들이 슬롯처럼 돌아가다 한 줄에서 멈추고, 그 문장이 이번 달 독자에게 건네는 한 줄이 됩니다."
+      "text": "〈월간 문장뽑기〉는 달마다 노래 가사, 시, 책, 수상 소감에서 문장을 골라 뽑기처럼 보여 줍니다. 가로로 긴 띠 위에서 문장들이 슬롯처럼 돌아가고, 독자가 화면을 꾹 눌러 멈추거나 캡처하는 순간 남은 한 줄이 그 독자의 이번 달 행운의 문장이 됩니다."
     },
     {
       "type": "grid",
       "width": "wide",
       "cols": 1,
       "mcols": 1,
-      "caption": "〈10월 행운의 문장 뽑기〉 · 2025.10.02 발행 · 소리 없이 반복 재생",
+      "caption": "〈10월 행운의 문장 뽑기〉 · 2025.10.02 발행",
       "items": [
         {
           "src": "assets/media/02/reel-2510.mp4",
           "ratio": "1278:272",
-          "loop": true
+          "loop": true,
+          "pick": true
         }
       ],
       "link": {
@@ -66,12 +67,13 @@
       "width": "wide",
       "cols": 1,
       "mcols": 1,
-      "caption": "〈12월 행운의 문장 뽑기〉 · 2025.12.09 발행 · 소리 없이 반복 재생",
+      "caption": "〈12월 행운의 문장 뽑기〉 · 2025.12.09 발행",
       "items": [
         {
           "src": "assets/media/02/reel-2512.mp4",
           "ratio": "1276:272",
-          "loop": true
+          "loop": true,
+          "pick": true
         }
       ],
       "link": {
@@ -84,12 +86,13 @@
       "width": "wide",
       "cols": 1,
       "mcols": 1,
-      "caption": "〈7월 행운의 문장 뽑기〉 · 2026.07.01 발행 · 소리 없이 반복 재생",
+      "caption": "〈7월 행운의 문장 뽑기〉 · 2026.07.01 발행",
       "items": [
         {
           "src": "assets/media/02/reel-2607.mp4",
           "ratio": "1276:272",
-          "loop": true
+          "loop": true,
+          "pick": true
         }
       ],
       "link": {
@@ -102,12 +105,13 @@
       "width": "wide",
       "cols": 1,
       "mcols": 1,
-      "caption": "〈10월 행운의 문장 뽑기〉 · 2026.10.01 발행 · 소리 없이 반복 재생",
+      "caption": "〈10월 행운의 문장 뽑기〉 · 2026.10.01 발행",
       "items": [
         {
           "src": "assets/media/02/reel-2610.mp4",
           "ratio": "1080:228",
-          "loop": true
+          "loop": true,
+          "pick": true
         }
       ],
       "link": {
@@ -124,7 +128,6 @@
       "width": "wide",
       "cols": 2,
       "mcols": 1,
-      "caption": "〈12월 행운의 문장 뽑기〉 · 2025.12.09 발행 · 문장 카드 4장",
       "items": [
         {
           "src": "assets/media/02/pages/21.jpg",
@@ -145,20 +148,7 @@
           "src": "assets/media/02/pages/24.jpg",
           "alt": "문장 뽑기 문장 카드",
           "ratio": "128:27"
-        }
-      ],
-      "link": {
-        "href": "https://www.instagram.com/reel/DSB1uUdkwzx/",
-        "label": "인스타그램에서 원문 보기"
-      }
-    },
-    {
-      "type": "grid",
-      "width": "wide",
-      "cols": 2,
-      "mcols": 1,
-      "caption": "〈5월 행운의 문장 뽑기〉 · 2026.05.01 발행 · 문장 카드 4장",
-      "items": [
+        },
         {
           "src": "assets/media/02/pages/01.jpg",
           "alt": "문장 뽑기 문장 카드",
@@ -178,20 +168,7 @@
           "src": "assets/media/02/pages/04.jpg",
           "alt": "문장 뽑기 문장 카드",
           "ratio": "128:27"
-        }
-      ],
-      "link": {
-        "href": "https://www.instagram.com/reel/DXyXU9SzpiF/",
-        "label": "인스타그램에서 원문 보기"
-      }
-    },
-    {
-      "type": "grid",
-      "width": "wide",
-      "cols": 2,
-      "mcols": 1,
-      "caption": "〈7월 행운의 문장 뽑기〉 · 2026.07.01 발행 · 문장 카드 4장",
-      "items": [
+        },
         {
           "src": "assets/media/02/pages/05.jpg",
           "alt": "문장 뽑기 문장 카드",
@@ -211,20 +188,7 @@
           "src": "assets/media/02/pages/08.jpg",
           "alt": "문장 뽑기 문장 카드",
           "ratio": "128:27"
-        }
-      ],
-      "link": {
-        "href": "https://www.instagram.com/reel/DaO87cczFOa/",
-        "label": "인스타그램에서 원문 보기"
-      }
-    },
-    {
-      "type": "grid",
-      "width": "wide",
-      "cols": 2,
-      "mcols": 1,
-      "caption": "〈8월 행운의 문장 뽑기〉 · 2026.08.03 발행 · 문장 카드 4장",
-      "items": [
+        },
         {
           "src": "assets/media/02/pages/09.jpg",
           "alt": "문장 뽑기 문장 카드",
@@ -244,20 +208,7 @@
           "src": "assets/media/02/pages/12.jpg",
           "alt": "문장 뽑기 문장 카드",
           "ratio": "128:27"
-        }
-      ],
-      "link": {
-        "href": "https://www.instagram.com/reel/DbkYj11zaup/",
-        "label": "인스타그램에서 원문 보기"
-      }
-    },
-    {
-      "type": "grid",
-      "width": "wide",
-      "cols": 2,
-      "mcols": 1,
-      "caption": "〈9월 행운의 문장 뽑기〉 · 2026.09.06 발행 · 문장 카드 4장",
-      "items": [
+        },
         {
           "src": "assets/media/02/pages/13.jpg",
           "alt": "문장 뽑기 문장 카드",
@@ -277,20 +228,7 @@
           "src": "assets/media/02/pages/16.jpg",
           "alt": "문장 뽑기 문장 카드",
           "ratio": "128:27"
-        }
-      ],
-      "link": {
-        "href": "https://www.instagram.com/reel/Dc8C2MgTu-z/",
-        "label": "인스타그램에서 원문 보기"
-      }
-    },
-    {
-      "type": "grid",
-      "width": "wide",
-      "cols": 2,
-      "mcols": 1,
-      "caption": "〈10월 행운의 문장 뽑기〉 · 2026.10.01 발행 · 문장 카드 4장",
-      "items": [
+        },
         {
           "src": "assets/media/02/pages/17.jpg",
           "alt": "문장 뽑기 문장 카드",
@@ -311,11 +249,7 @@
           "alt": "문장 뽑기 문장 카드",
           "ratio": "128:27"
         }
-      ],
-      "link": {
-        "href": "https://www.instagram.com/reel/Dd8rVXTzADS/",
-        "label": "인스타그램에서 원문 보기"
-      }
+      ]
     },
     {
       "type": "section",
@@ -324,7 +258,15 @@
     },
     {
       "type": "p",
-      "text": "매달 발행하고 있습니다. <span class=\"todo\">회차별 조회 · 저장 · 공유 수</span>"
+      "text": "〈월간 문장뽑기〉는 매달 발행하고 있습니다. 인사이트를 확인한 일곱 회차의 조회는 모두 합해 약 321만 회입니다."
+    },
+    {
+      "type": "p",
+      "text": "2025년 〈10월 행운의 문장 뽑기〉는 <strong>조회 246.3만 회, 공유 7.6만 회, 저장 2만 회</strong>를 기록했습니다. 공유가 좋아요(5.6만 회)보다 많았고, 이 릴스 하나로 2,483명이 생맥을 팔로우했습니다."
+    },
+    {
+      "type": "p",
+      "text": "공유가 좋아요를 넘은 것은 이 회차만이 아닙니다. 일곱 회차 중 <strong>다섯 회차에서 공유가 좋아요보다 많았습니다.</strong> 〈12월 행운의 문장 뽑기〉는 공유 9,225회로 좋아요 7,253회를 넘었고, 조회 29만 회에 147명의 새 팔로워를 데려왔습니다. 독자들은 뽑은 문장에 반응을 남기기보다, 그 문장을 누군가에게 보내는 쪽을 택했습니다."
     }
   ],
   "credits": [
