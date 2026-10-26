@@ -1,6 +1,6 @@
 # 프로젝트 원고 (content/projects/NN.json)
 
-상세 페이지 6개는 이 폴더의 JSON을 `tools/build.py`가 `projects/NN.html`로 만듭니다.
+상세 페이지 5개는 이 폴더의 JSON을 `tools/build.py`가 `projects/NN.html`로 만듭니다.
 원고와 미디어 순서는 JSON에만 있고, 모양은 `assets/journal.css`가 맡습니다.
 
 ```
@@ -12,7 +12,7 @@ python3 -m http.server 4173   # 미리보기: http://127.0.0.1:4173/projects/01.
 
 | 키 | 내용 |
 |---|---|
-| `num` | `"01"`~`"06"`. 파일 이름, 이전/다음 순서 |
+| `num` | `"01"`~`"05"`. 파일 이름, 이전/다음 순서 |
 | `status` | `"dummy"`면 머리에 '임시 시안' 안내가 뜸. 실제 원고로 다 바꾸면 지움 |
 | `category` | 번호 옆 작은 글씨 (목차 오른쪽 캡션과 같게) |
 | `title`, `why` | 제목과 WHY 질문 (목차 호버 질문과 같게) |
